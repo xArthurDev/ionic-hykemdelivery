@@ -1,0 +1,25 @@
+<ion-content>
+
+  <img src="./assets/design/Celular.png" class="email">
+
+  <img class="arrow" src="./assets/design/arroww.png" routerLink="/dashboard">
+  <router-outlet></router-outlet>
+
+  <img class="input" src="./assets/design/input.png">
+
+  <ion-text class="text">Qual o número do seu celular?</ion-text>
+  <ion-text color="medium" class="text1">Exemplo: (55) 31 9 9999-9999</ion-text>
+  <form class="form">    
+    <ion-item lines="full">
+      <ion-label class="text0" color="medium" position="floating">Número</ion-label>
+      <ion-input class="text0" color="primary" type="number" #number required></ion-input>
+    </ion-item>
+  </form>
+  <ion-text class="text2">Como deseja receber o código?</ion-text>
+
+  <ion-button fill="solid" color="warning" class="wbutton" routerLink="/confirm-cellphone">Receber por WhatsApp</ion-button>
+  <router-outlet></router-outlet>
+  <ion-button fill="outline" color="warning" class="sbutton" routerLink="/confirm-cellphone">Receber por SMS</ion-button>
+  <router-outlet></router-outlet>
+
+</ion-content>
