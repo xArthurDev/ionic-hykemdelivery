@@ -1,0 +1,119 @@
+<ion-header no-border style="height: 60px;">
+  <img class="arrow" src="./assets/design/arroww.png" routerLink="/a-details">
+  <router-outlet></router-outlet>
+  <p style="text-align: center; color: #000000; font-family: Coolvetica; font-size: 25px;">
+    Informações
+  </p>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+  </ion-item>
+  <p style="color: #000000; text-align: center; font-size: 15px; font-style: Segoe UI;">
+    <strong>A Cell Phone é uma das mais conceituadas assistências técnicas especializada em smartphones de Minas Gerais, sendo referência em atendimento e serviços de reparo.
+    Efetuamos reparos em todos os modelos de aparelhos celulares e tablets das marcas Apple (iPhone e iPad), Motorola, Xiaomi, Asus Zenfone, Samsung, Alcatel, Lenovo, LG.
+    Possuimos ampla variedade de serviços voltados para celulares e tablets, desde simples reparos como também reparos avançados em placa.
+    </strong></p>
+<ion-item-divider color="warning"></ion-item-divider>
+  <ion-card class="poster">
+    <ion-thumbnail class="avatar">
+      <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold_Dark-512.png" alt="ion">
+    </ion-thumbnail>
+    <ion-card-header>
+      <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Super-Assistência</ion-card-title>
+    </ion-card-header>
+    <ion-card-subtitle class="subtitle" style="font-family:Coolvetica; font-size: 15px; color: #55565c;">
+      <p class="ion-text-wrap">Esta assistência tem nosso selo Super pelo alto nível de qualidade e serviço.</p>
+    </ion-card-subtitle>
+  
+    <ion-footer class="footer">
+      <ion-row>
+        <ion-col class="check1">
+          <span>
+            <ion-icon name="checkmark-outline" color="warning"></ion-icon>
+            <span style="font-family:BebasNeuePro; font-size: 18px; color: #7d7e80;">Um dos mais pedidos da região.</span>
+          </span>
+        </ion-col>
+        <ion-col class="check2">
+          <span lines="none">
+            <ion-icon name="checkmark-outline" color="warning"></ion-icon>
+            <span style="font-family:BebasNeuePro; font-size: 18px; color: #7d7e80; height: 20px;">Entrega no tempo prometido.</span>
+          </span>
+        </ion-col>
+        <ion-col class="check3">
+          <span lines="none">
+            <ion-icon name="checkmark-outline" color="warning"></ion-icon>
+            <span style="font-family:BebasNeuePro; font-size: 18px; color: #7d7e80;">Muitas avaliações 5 estrelas.</span>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+<ion-item-divider color="warning"></ion-item-divider>
+  <ion-card class="poster2">
+    <ion-thumbnail class="avatar">
+      <img src="https://image.flaticon.com/icons/svg/270/270737.svg" alt="ion">
+    </ion-thumbnail>
+    <ion-card-header>
+      <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Entrega HykemDelivery</ion-card-title>
+    </ion-card-header>
+    <ion-card-subtitle class="subtitle" style="font-family:Coolvetica; font-size: 15px; color: #55565c;">
+      <p>Qualidade e eficiência na entrega.</p>  
+    </ion-card-subtitle>
+  
+    <ion-footer class="footer">
+      <ion-row>
+        <ion-col class="col">
+          <span>
+            <span class="ion-text-wrap" style="font-family:BebasNeuePro; font-size: 16px; color: #7d7e80;">
+            • Usamos nossa tecnologia e experiência pra entregar
+             no tempo prometido. Siga com o mapa e veja a hora da
+             chegada.</span>
+        </span>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+<ion-item-divider color="warning"></ion-item-divider>
+<ion-card (click)="presentActionSheet()" class="card4">
+  <ion-card-header> 
+    <ion-chip class="chip4">
+      <ion-icon color="warning" name="arrow-down-circle-outline"></ion-icon>
+    </ion-chip>
+    <ion-card-title class="title4" style="font-family:BebasNeuePro; font-size: 30px; color: #55565c; text-align: center;">Horários de entrega</ion-card-title>
+  </ion-card-header>
+</ion-card>
+<ion-item-divider color="warning"></ion-item-divider>
+<ion-item lines="none">
+  <ion-title style="font-family:BebasNeuePro; color: #55565c; font-size: 25px; text-align: start;"> <strong>Pagamento pelo HykemDelivery </strong></ion-title>
+</ion-item>
+
+<ion-chip>
+  <ion-icon name="card" color="warning"></ion-icon>
+  <ion-label style="font-family:Coolvetica; color: #55565c;">Mastercard</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="card" color="warning"></ion-icon>
+  <ion-label style="font-family:Coolvetica; color: #55565c;">Visa</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="card" color="warning"></ion-icon>
+  <ion-label style="font-family:Coolvetica; color: #55565c;">Elo</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="card" color="warning"></ion-icon>
+  <ion-label style="font-family:Coolvetica; color: #55565c;">Hipercard</ion-label>
+</ion-chip>
+
+<ion-item lines="none">
+</ion-item>
+
+<p style="color: #686868; text-align: center; font-size: 15px; font-style: Segoe UI;">
+  O HykemDelivery é gratuito e todos os preços apresentados por nossos parceiros são definidos
+  por eles.
+</p>
+
+</ion-content>
