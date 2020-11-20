@@ -1,0 +1,38 @@
+.dash{
+    width: 100%;
+    height: 100%;
+    background: fixed,
+    url('/assets/design/Login e Cadastro.png');
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  .button1 {
+    position: absolute;
+    left: 45px;
+    top: 280px;
+    }
+  .button2 {
+    position: absolute;
+    left: 45px;
+    top: 340px;
+    }
+  .button3 {
+    position: absolute;
+    left: 45px;
+    top: 400px;
+    }
+    .text{
+      font-family: 'Coolvetica';
+      position: absolute;
+      left: 125px;
+      top: 250px;
+  }
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
