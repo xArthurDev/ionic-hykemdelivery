@@ -1,0 +1,53 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+.sticky + .content {
+    padding-top: 102px;
+}
+.htitle{
+    position: fixed;
+    left: 120px;
+    top: 5px;
+}
+.ftitle{
+    top: -50px;
+}
+.ttitle{
+    top: -80px;
+}
+.poster{
+    top: -80px;
+    width: 400px;
+    height: 130px;
+    background-size: cover;
+}
+.title{
+      top: 50px;
+}
+.title2{
+    top: -70px;
+    left: 70px;
+}
+.subtitle{
+    top: -90px;
+    left: 90px;
+}
+.footer{
+    top: -80px;
+}
+.abutton{
+    font-family: 'Coolvetica';
+    position: absolute;
+    left: -10px;
+    top: 40px;
+    letter-spacing: 0.5px;
+}
+.dbutton{
+    font-family: 'Coolvetica';
+    position: absolute;
+    left: -220px;
+    top: 40px;
+    letter-spacing: 0.5px;
+}

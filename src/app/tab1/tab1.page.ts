@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  slidesOptions = {
+    slidesPerView: 3
+  };
+  slidesOptions2 = {
+    slidesPerView: 2.2
+  };
+  slidesOptions3 = {
+    slidesPerView: 2
+  };
+
   constructor() {}
 
 }

@@ -1,17 +1,178 @@
-<ion-header [translucent]="true">
+<ion-content padding>
+
+  <ion-header class="sticky" no-border [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title class="htitle" style="font-family:Coolvetica; font-size: 35px; color: #FF9C1A; position: center;">Pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-list class="content">
+<ion-item class="ftitle" lines="none">
+  <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Em Andamento</p>
+</ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-item lines="none" class="ttitle">
+  <p style="font-family:Coolvetica; font-size: 20px; color: #2a2b2e;" slot="start">Ter, 02 setembro 2020</p>
+</ion-item>
+<ion-card class="poster">
+  <ion-avatar>
+  <img src="../../assets/design/img1.jpg" alt="ion">
+  </ion-avatar>
+  <ion-card-header>
+    <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
+  </ion-card-header>
+  <ion-card-subtitle class="subtitle" style="font-family:BebasNeuePro; font-size: 15px; color: #55565c;">
+    Número - 2104 | Tela Quebrada
+  </ion-card-subtitle>
+
+  <ion-footer class="footer">
+    <ion-row>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="alert-circle" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Em Análise</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="time" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Prazo: 10 dias</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="cash" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">R$110</ion-label>
+        </ion-chip>
+        <ion-button fill="clear" color="warning" size="small" class="abutton">Ajuda</ion-button>
+        <ion-button fill="clear" color="warning" size="small" class="dbutton">Detalhes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-card>
+
+<ion-item lines="none" class="ttitle">
+  <p style="font-family:Coolvetica; font-size: 20px; color: #2a2b2e;" slot="start">Qua, 29 agosto 2020</p>
+</ion-item>
+<ion-card class="poster">
+  <ion-avatar>
+  <img src="../../assets/design/img2.jpg" alt="ion">
+  </ion-avatar>
+  <ion-card-header>
+    <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Computadores LTDA</ion-card-title>
+  </ion-card-header>
+  <ion-card-subtitle class="subtitle" style="font-family:BebasNeuePro; font-size: 15px; color: #55565c;">
+    Número - 721 | Perda Total
+  </ion-card-subtitle>
+
+  <ion-footer class="footer">
+    <ion-row>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="checkmark-circle" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Pronto para Entrega</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="time" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Prazo: 2 dias</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="cash" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">R$20</ion-label>
+        </ion-chip>
+        <ion-button fill="clear" color="warning" size="small" class="abutton">Ajuda</ion-button>
+        <ion-button fill="clear" color="warning" size="small" class="dbutton">Detalhes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-card>
+
+  <ion-item class="ftitle" lines="none">
+    <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Finalizados</p>
+  </ion-item>
+
+<ion-item lines="none" class="ttitle">
+  <p style="font-family:Coolvetica; font-size: 20px; color: #2a2b2e;" slot="start">Sáb, 15 agosto 2020</p>
+</ion-item>
+<ion-card class="poster">
+  <ion-avatar>
+  <img src="../../assets/design/img3.jpg" alt="ion">
+  </ion-avatar>
+  <ion-card-header>
+    <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Informática PDK</ion-card-title>
+  </ion-card-header>
+  <ion-card-subtitle class="subtitle" style="font-family:BebasNeuePro; font-size: 15px; color: #55565c;">
+    Número - 1201 | USB Com Defeito
+  </ion-card-subtitle>
+
+  <ion-footer class="footer">
+    <ion-row>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="star" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Você não avaliou</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="time" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Tempo total: 6 dias</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="cash" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">R$150</ion-label>
+        </ion-chip>
+        <ion-button fill="clear" color="warning" size="small" class="abutton">Ajuda</ion-button>
+        <ion-button fill="clear" color="warning" size="small" class="dbutton">Detalhes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-card>
+
+<ion-item lines="none" class="ttitle">
+  <p style="font-family:Coolvetica; font-size: 20px; color: #2a2b2e;" slot="start">Seg, 27 julho 2020</p>
+</ion-item>
+<ion-card class="poster">
+  <ion-avatar>
+  <img src="../../assets/design/img4.jpg" alt="ion">
+  </ion-avatar>
+  <ion-card-header>
+    <ion-card-title class="title2" style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Assistência Xiaomi</ion-card-title>
+  </ion-card-header>
+  <ion-card-subtitle class="subtitle" style="font-family:BebasNeuePro; font-size: 15px; color: #55565c;">
+    Número - 1503 | Celular Não Liga
+  </ion-card-subtitle>
+
+  <ion-footer class="footer">
+    <ion-row>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="star" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">3,6</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="time" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">Tempo total: 3 dias</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-chip>
+          <ion-icon name="cash" color="primary"></ion-icon>
+          <ion-label style="font-family:BebasNeuePro; font-size: 15px; color: #577ECA;">R$90</ion-label>
+        </ion-chip>
+        <ion-button fill="clear" color="warning" size="small" class="abutton">Ajuda</ion-button>
+        <ion-button fill="clear" color="warning" size="small" class="dbutton">Detalhes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-card>
+</ion-list>
 </ion-content>
