@@ -1,0 +1,130 @@
+<ion-header no-border style="height: 60px;">
+  <img class="arrow" src="./assets/design/arroww.png" routerLink="/a-details">
+  <router-outlet></router-outlet>
+  <p style="text-align: center; color: #000000; font-family: Coolvetica; font-size: 25px;">
+    Escolha uma opção
+  </p>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment 
+    value="today" 
+    color="warning"
+    scrollable="false"
+    mode="md"
+    [(ngModel)]="segment" 
+    (ionChange)="segmentChanged($event)">
+
+      <ion-segment-button value="today" mode="md">
+        <ion-label style="font-family:BebasNeuePro; font-size: 20px; color: #ecb603;">Hoje,</ion-label>
+        <span style="font-family:BebasNeuePro; font-size: 20px; color: #000000;">5</span>
+      </ion-segment-button>
+
+      <ion-segment-button value="tomorrow" mode="md">
+        <ion-label style="font-family:BebasNeuePro; font-size: 20px; color: #ecb603;">Amanhã,</ion-label>
+        <span style="font-family:BebasNeuePro; font-size: 20px; color: #000000;">6</span>
+      </ion-segment-button>
+
+    </ion-segment>
+
+
+    
+
+      <div *ngIf="segment === 'today'">
+        
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label style="text-align: left; color: #000000; font-family: BebasNeuePro; font-size: 25px;">
+                Para agora
+              </ion-label>
+            </ion-list-header>
+        
+            <ion-item lines="none">
+              <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">Entrega Padrão</ion-label>
+              <sub class="sub" style="color: #7e7e81; text-align: left; font-family: Coolvetica;">20 - 30 min</sub>
+              <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+              <ion-radio color="warning" slot="end"></ion-radio>
+            </ion-item>
+         
+        <ion-list-header>
+          <ion-label style="text-align: left; color: #000000; font-family: BebasNeuePro; font-size: 25px;">
+            Agendamento
+          </ion-label>
+        </ion-list-header>
+    
+        <ion-item lines="none">
+          <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">17:30 - 18:00</ion-label>
+          <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+          <ion-radio color="warning" slot="end"></ion-radio>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">18:00 - 18:30</ion-label>
+          <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+          <ion-radio color="warning" slot="end"></ion-radio>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">18:30 - 19:00</ion-label>
+          <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+          <ion-radio color="warning" slot="end"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      
+     </ion-list>
+
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+     <ion-button class="button" color="warning" expand="full" routerLink="/">CONTINUAR</ion-button>
+    </div>
+    
+      
+      <div *ngIf="segment === 'tomorrow'">
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label style="text-align: left; color: #000000; font-family: BebasNeuePro; font-size: 25px;">
+              Agendamento
+            </ion-label>
+          </ion-list-header>
+      
+          <ion-item lines="none">
+            <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">17:30 - 18:00</ion-label>
+            <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+            <ion-radio color="warning" slot="end"></ion-radio>
+          </ion-item>
+      
+          <ion-item lines="none">
+            <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">18:00 - 18:30</ion-label>
+            <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+            <ion-radio color="warning" slot="end"></ion-radio>
+          </ion-item>
+      
+          <ion-item lines="none">
+            <ion-label style="color: #55565c; text-align: left; font-family: Coolvetica;">18:30 - 19:00</ion-label>
+            <strong style="color: #000000; text-align: left; font-family: 'Segoe UI';">R$10,00</strong>
+            <ion-radio color="warning" slot="end"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        
+    </ion-list>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-item lines="none"></ion-item>
+    <ion-button class="button" color="warning" expand="full" routerLink="/">CONTINUAR</ion-button>
+  </div>
+  
+</ion-content>
