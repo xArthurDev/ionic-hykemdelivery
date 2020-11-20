@@ -1,0 +1,21 @@
+<ion-content>
+
+  <img src="./assets/design/Email.png" class="email">
+
+  <img class="arrow" src="./assets/design/arroww.png" routerLink="/dashboard">
+  <router-outlet></router-outlet>
+
+  <img class="input" src="./assets/design/input.png">
+
+  <ion-text class="text">Qual o seu E-mail?</ion-text>
+  <form class="form">    
+    <ion-item lines="full">
+      <ion-label class="text0" color="medium" position="floating">E-mail</ion-label>
+      <ion-input class="text0" color="primary" type="text" #email required></ion-input>
+    </ion-item>
+  </form>
+  <ion-text class="text2">será enviado um e-mail de confirmação.</ion-text>
+
+  <ion-button class="button" color="warning" expand="full" routerLink="/confirm-email">CONTINUAR</ion-button>
+
+</ion-content>
