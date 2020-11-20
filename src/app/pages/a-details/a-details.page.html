@@ -1,0 +1,569 @@
+  <ion-header no-border style="height: 100px;">
+    <ion-grid>
+      <ion-row>
+        <div [style.backgroundImage]="'url(https://i.pinimg.com/originals/cf/8a/99/cf8a99b3758b5ba0deead96b963dffd6.jpg)'"
+          style="height: 100px; width: 100%; background-size: cover; position: absolute; top: 0; left: 0;"
+        ></div>
+        <ion-col>
+          <ion-buttons>
+            <ion-back-button slot="start" color="primary-contrast"> </ion-back-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col class="sbutton">
+          <img class="sbutton" src="https://snipstock.com/assets/cdn/png/9547975620bbf0b2a179c2ed4bdc3d8b.png">
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-card class="card">
+    <router-outlet></router-outlet>
+    <ion-card-header> 
+      <ion-chip button [routerLink]="['/info-details']" class="chip">
+        <ion-icon color="primary" name="arrow-forward-circle-outline"></ion-icon>
+      </ion-chip>
+      <ion-card-title button [routerLink]="['/info-details']" class="title" style="font-family:BebasNeuePro; font-size: 20px; color: #577ECA;">HD Assistência</ion-card-title>
+    </ion-card-header>
+    <ion-card-subtitle class="subtitle" style="font-family:Coolvetica; font-size: 15px; color: #8e8e8f;">
+      Assistência • 8,4 km
+    </ion-card-subtitle>
+
+    <ion-footer class="footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip button [routerLink]="['/rating-details']" class="chip1">
+            <ion-icon size="small" name="star" color="primary"></ion-icon>
+            <ion-label style="font-family:Coolvetica; font-size: 15px; color: #577ECA;">4,10 (225)</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card button [routerLink]="['/type-details']" class="card3">
+    <ion-avatar class="avatar">
+      <img src="./assets/design/icon7.png" alt="ion">
+    </ion-avatar>
+    <ion-card-header> 
+      <ion-chip class="chip3">
+        <ion-icon name="arrow-forward-circle-outline" color="warning"></ion-icon>
+      </ion-chip>
+      <ion-card-title class="title3" style="font-family:Coolvetica; font-size: 18px; color: #6b6666;">Entrega</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card routerLink="/schedule-details" class="card2">
+  <router-outlet></router-outlet>
+    <ion-card-header> 
+      <ion-chip class="chip4">
+        <ion-icon color="primary" name="arrow-forward-circle-outline"></ion-icon>
+      </ion-chip>
+      <ion-card-title class="title" style="font-family:BebasNeuePro; font-size: 20px; color: #577ECA;">Hoje,</ion-card-title>
+    </ion-card-header>
+    <ion-card-subtitle class="subtitle" style="font-family:Coolvetica; font-size: 15px; color: #8e8e8f;">
+      60, 90 min • R$12,00
+    </ion-card-subtitle>
+  </ion-card>
+
+  <ion-chip class="chip5">
+    <ion-icon name="reader-outline" color="primary"></ion-icon>
+    <ion-label style="font-family:Segoe UI; font-size: 15px; color: #202020;">Ganhe R$ 5 em pedidos a partir de R$ 15</ion-label>
+  </ion-chip>
+
+  <ion-item class="destaq" lines="none">
+    <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Destaques</p>
+  </ion-item>
+
+  <ion-slides class="sdestaq" [options]="slidesOptions2" pager="true">
+    <ion-slide>
+      <ion-card button [routerLink]="['/a-details']">
+        <img src="../../assets/design/img1.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Troca de tela</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle style="font-family:BebasNeuePro; font-size: 16px; color: #9d9fa6;">
+          Troca a tela do seu celular
+        </ion-card-subtitle>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ion-chip>
+                <ion-icon name="cash" color="primary"></ion-icon>
+                <ion-label style="font-family:BebasNeuePro; font-size: 16px; color: #577ECA;">R$140,90</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card button [routerLink]="['/a-details']">
+        <img src="../../assets/design/img2.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Troca de entrada USB</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle style="font-family:BebasNeuePro; font-size: 16px; color: #9d9fa6;">
+          Troca a entrada do seu USB
+        </ion-card-subtitle>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ion-chip>
+                <ion-icon name="cash" color="primary"></ion-icon>
+                <ion-label style="font-family:BebasNeuePro; font-size: 16px; color: #577ECA;">R$140,90</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card button [routerLink]="['/a-details']">
+        <img src="../../assets/design/img3.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Perda Total</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle style="font-family:BebasNeuePro; font-size: 16px; color: #9d9fa6;">
+          Reparo e restaura da perda total
+        </ion-card-subtitle>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ion-chip>
+                <ion-icon name="cash" color="primary"></ion-icon>
+                <ion-label style="font-family:BebasNeuePro; font-size: 16px; color: #577ECA;">R$140,90</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card button [routerLink]="['/a-details']">
+        <img src="../../assets/design/img4.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Celular não liga</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle style="font-family:BebasNeuePro; font-size: 16px; color: #9d9fa6;">
+          Arruma seu celular que não liga
+        </ion-card-subtitle>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ion-chip>
+                <ion-icon name="cash" color="primary"></ion-icon>
+                <ion-label style="font-family:BebasNeuePro; font-size: 16px; color: #577ECA;">R$140,90</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card button [routerLink]="['/a-details']">
+        <img src="../../assets/design/img4.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title style="font-family:BebasNeuePro; font-size: 20px; color: #FF9C1A;">Bateria Viciada</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle style="font-family:BebasNeuePro; font-size: 16px; color: #9d9fa6;">
+          Conserta sua bateria viciada
+        </ion-card-subtitle>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ion-chip>
+                <ion-icon name="cash" color="primary"></ion-icon>
+                <ion-label style="font-family:BebasNeuePro; font-size: 16px; color: #577ECA;">R$140,90</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-item class="p-title" lines="none">
+    <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Promoções</p>
+  </ion-item>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #6e6d6d; text-decoration: line-through; font-size: 14px;">R$130,90</span>
+              <span style="color: #25c01f; font-size: 18px;">R$140,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #6e6d6d; text-decoration: line-through; font-size: 14px;">R$130,90</span>
+              <span style="color: #25c01f; font-size: 18px;">R$140,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #6e6d6d; text-decoration: line-through; font-size: 14px;">R$130,90</span>
+              <span style="color: #25c01f; font-size: 18px;">R$140,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #6e6d6d; text-decoration: line-through; font-size: 14px;">R$130,90</span>
+              <span style="color: #25c01f; font-size: 18px;">R$140,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-item class="p-title" lines="none">
+    <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Serviços</p>
+  </ion-item>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-item class="p-title" lines="none">
+    <p style="font-family:BebasNeuePro; font-size: 24px; color: #577ECA;" slot="start">Produtos</p>
+  </ion-item>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+  <ion-card class="p-card">
+    <div class="p-thumb">
+      <img src="https://i.pinimg.com/originals/4e/15/d1/4e15d10aff99a9b0f0f6aa02732ca9eb.png" alt="ion">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="p-title2" style="font-family:Coolvetica; font-size: 20px; color: #FF9C1A;">Troca de Tela</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="p-subtitle" >
+      <ion-item lines="none">
+        <ion-label style="color: black; font-family: Segoe UI; font-size: 12px;" class="ion-text-wrap">
+          Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada, Tela Quebrada,
+          Tela Quebrada, Tela Quebrada, Tela Quebrada.
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer class="p-footer">
+      <ion-row>
+        <ion-col center text-center>
+          <ion-chip>
+            <ion-icon name="cash" color="primary"></ion-icon>
+            <ion-label style="font-family:BebasNeuePro;">
+              <span style="color: #577ECA; font-size: 18px;">R$130,90</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+
+</ion-content>
