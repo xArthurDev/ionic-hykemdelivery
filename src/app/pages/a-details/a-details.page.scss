@@ -5,8 +5,8 @@
 .sbutton{
     height: 18px;
     width: 18px;
-    left: 160px;
-    top: 14px;
+    left: 40vw;
+    top: 1vh;
 }
 :focus {
     outline: 0;
@@ -14,38 +14,29 @@
     outline-style: none;
 }
 .card{
-    width: 400px;
-    height: 60px;
+    width: 95vw;
+    height: 7vh;
     background-size: cover;
     overflow: visible;
 }
-.card1{
-    width: 200px;
-    height: 60px;
-    background-size: cover;
-}
 .title{
-    top: -60px;
-    left: -10px;
-}
-.title2{
-    top: -100px;
-    left: -10px;
+    top: -7vh;
+    left: -2vw;
 }
 .subtitle{
-    top: -80px;
-    left: 5px;
+    top: -9vh;
+    left: 2vw;
 }
 .footer{
     top: -80px;
 }
 .chip{
-    top: -25px;
-    left: 310px;
+    top: -3vh;
+    left: 75vw;
 }
 .chip1{
-    top: -35px;
-    left: 280px;
+    top: -4vh;
+    left: 65vw;
 }
 .chip2{
     top: -5px;
@@ -62,45 +53,45 @@
     height: 45px;
 }
 .card2{
-    left: 200px;
-    top: -60px;
-    width: 200px;
-    height: 50px;
+    left: 49vw;
+    top: -7.5vh;
+    width: 46vw;
+    height: 6.2vh;
     background-size: cover;
 }
 .card3{
-    width: 200px;
-    height: 50px;
+    width: 46vw;
+    height: 6vh;
     background-size: cover;   
 }
 .title3{
-    top: -95px;
-    left: 40px;
+    top: -11.5vh;
+    left: 9vw;
 }
 .footer{
     top: -80px;
 }
 .chip3{
-    top: -55px;
-    left: 90px;
+    top: -7vh;
+    left: 22vw;
 }
 .chip4{
-    top: -15px;
-    left: 110px;
+    top: -2vh;
+    left: 26vw;
 }
 .chip5{
-    top: -60px;
-    left: 40px;
+    top: -8vh;
+    left: 8vw;
 }
 .avatar{
     width: 40px;
     height: 40px;
 }
 .destaq{
-    top: -70px;
+    top: -9vh;
 }
 .sdestaq{
-    top: -90px;
+    top: -10vh;
 }
 .poster4{
     width: 400px;
@@ -119,20 +110,20 @@
     top: -45px;
 }
 .p-title{
-    top: -100px;
+    top: -10vh;
 }
 .p-card{
-    top: -100px;
-    width: 400px;
-    height: 150px;
+    top: -10vh;
+    width: 95vw;
+    height: 180px;
 }
 .p-title2{
-    top: -310px;
-    left: 100px;
+    top: -37.5vh;
+    left: 23vw;
 }
 .p-subtitle{
-    top: -330px;
-    left: 90px;
+    top: -40vh;
+    left: 25vw;
     max-inline-size: 250px;
 }
 .p-thumb{
@@ -141,6 +132,6 @@
     background-size: cover;
 }
 .p-footer{
-    left: 105px;
-    top: -350px;
+    left: 25vw;
+    top: -42vh;
 }

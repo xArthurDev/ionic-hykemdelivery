@@ -1,15 +1,18 @@
-ion-toolbar {
-    width: 100%;
+  ion-toolbar {
+    width: 450vw;
     height: 100%;
+    left: -180vw;
+    top: -2vh;
     background-size: cover;
     --background: url('/assets/design/Gradiente.png'); 
  }
  .logo {
-    height: 50px;
+    height: 6vh;
   }
-.card2{
-    width: 200px;
-    height: 70px;
+  .card2{
+    width: 1000vw;
+    height: 10vh;
+    left: -2vw;
     background: linear-gradient(rgba(87, 126, 202, 0.61), rgba(87, 126, 202, 0.61)),
     url('/assets/design/img1.jpg');
     background-size: cover;
@@ -19,8 +22,9 @@ ion-toolbar {
     color: #fff;
   }
   .card3{
-    width: 200px;
-    height: 70px;
+    width: 1000vw;
+    height: 10vh;
+    left: 0vw;
     background: linear-gradient(rgba(87, 126, 202, 0.61), rgba(87, 126, 202, 0.61)),
     url('/assets/design/img2.jpg');
     background-size: cover;
@@ -30,8 +34,9 @@ ion-toolbar {
     color: #fff;
   }
   .card4{
-    width: 200px;
-    height: 70px;
+    width: 1000vw;
+    height: 10vh;
+    left: 2vw;
     background: linear-gradient(rgba(87, 126, 202, 0.61), rgba(87, 126, 202, 0.61)),
     url('/assets/design/img3.jpg');
     background-size: cover;
@@ -40,14 +45,24 @@ ion-toolbar {
     align-items: center;
     color: #fff;
   }
-  .poster{
-    width: 250px;
-    height: 250px;
-    background-size: cover;
+  .item-title{
+    left: -2vw;
   }
-  .title{
-      top: 50px;
-}
+  .item-title2{
+    left: -2vw;
+  }
+  .item-title3{
+    left: -2vw;
+  }
+  .slides{
+    left: -1vw;
+  }
+  .slides2{
+    left: 2vw;
+  }
+  .slides3{
+    left: -1vw;
+  }
 .input::-webkit-input-placeholder {
     font-family: 'Coolvetica';
   }
@@ -63,27 +78,30 @@ ion-toolbar {
   .input::-moz-placeholder {
     font-family: 'Coolvetica';
   }
-  .poster{
-    width: 400px;
-    height: 120px;
+  .card{
+    width: 95vw;
+    height: 14vh;
+    left: -4vw;
     background-size: cover;
   }
-  .title{
-      top: 50px;
-}
-.title2{
-    top: -70px;
-    left: 70px;
-}
-.subtitle{
-    top: -90px;
-    left: 90px;
-}
-.footer{
-    top: -75px;
-}
-:focus {
+  .title2{
+    top: -8.5vh;
+    left: 15vw;
+  }
+  .subtitle{
+    top: -11vh;
+    left: 20vw;
+  }
+  .footer{
+    top: -8vh;
+  }
+  :focus {
   outline: 0;
   outline-color: transparent;
   outline-style: none;
-}
+  }
+.input {
+  width: 100vw;
+  left: -4vw;
+  top: -1vh;
+  }

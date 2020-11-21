@@ -4,50 +4,50 @@
     width: 100%
   }
 .sticky + .content {
-    padding-top: 102px;
+    padding-top: 10vh;
 }
 .htitle{
     position: fixed;
-    left: 120px;
-    top: 5px;
+    left: 26.5vw;
+    top: 5vh;
 }
 .ftitle{
-    top: -50px;
+    top: -6vh;
+    left: -3vw;
 }
 .ttitle{
-    top: -80px;
+    top: -8vh;
+    left: -3vw;
 }
-.poster{
+.card{
     top: -80px;
-    width: 400px;
-    height: 130px;
+    width: 95vw;
+    height: 18vh;
+    left: -4vw;
     background-size: cover;
 }
-.title{
-      top: 50px;
-}
 .title2{
-    top: -70px;
-    left: 70px;
+    top: -8.5vh;
+    left: 15vw;
 }
 .subtitle{
-    top: -90px;
-    left: 90px;
+    top: -11vh;
+    left: 20vw;
 }
 .footer{
-    top: -80px;
+    top: -7vh;
 }
 .abutton{
-    font-family: 'Coolvetica';
+    font-family: 'KeepCalm';
     position: absolute;
-    left: -10px;
-    top: 40px;
+    left: -2vw;
+    top: 5vh;
     letter-spacing: 0.5px;
 }
 .dbutton{
-    font-family: 'Coolvetica';
+    font-family: 'KeepCalm';
     position: absolute;
-    left: -220px;
-    top: 40px;
+    left: -55vw;
+    top: 5vh;
     letter-spacing: 0.5px;
 }

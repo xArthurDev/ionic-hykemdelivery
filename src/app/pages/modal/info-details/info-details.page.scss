@@ -9,30 +9,26 @@
     outline-color: transparent;
     outline-style: none;
 }
-.poster{
+.card{
     top: 10px;
-    width: 400px;
-    height: 150px;
+    width: 95vw;
+    height: 18vh;
     background-size: cover;
 }
-.poster2{
+.card2{
     top: 10px;
-    width: 400px;
-    height: 100px;
+    width: 95vw;
+    height: 18vh;
     background-size: cover;
 }
 .title2{
-    top: -70px;
-    left: 70px;
+    top: -7vh;
+    left: 17vw;
 }
 .subtitle{
-    top: -105px;
-    left: 85px;
+    top: -10vh;
+    left: 21vw;
     max-inline-size: 250px;
-}
-.subtitle2{
-    left: 85px;
-    top: -125px;
 }
 .footer{
     top: -130px;
@@ -43,23 +39,23 @@
 }
 .check1{
     white-space: nowrap;
-    top: 17px;
-    left: 75px;
+    top: 6vh;
+    left: 18vw;
 }
 .check2{
     white-space: nowrap;
-    top: 45px;
-    left: -125px;
+    top: 5vh;
+    left: 18vw;
 }
 .check3{
     white-space: nowrap;
-    top: 42px;
-    left: 75px;
+    top: 4vh;
+    left: 18vw;
 }
 .col{
     max-inline-size: 250px;
-    top: 10px;
-    left: 80px;
+    top: 5vh;
+    left: 20vw;
 }
 .col2{
     white-space: nowrap;
@@ -72,13 +68,14 @@
     left: -200px;
 }
 .card4{
-    width: 450px;
-    height: 50px;
+    width: 95vw;
+    height: 7vh;
+    top: 1vh;
     background-size: cover;
 }
 .title4{
-    top: -60px;
-    left: -35px;
+    top: -6vh;
+    left: -5vw;
 }
 .subtitle4{
     top: -80px;
@@ -88,6 +85,6 @@
     top: -80px;
 }
 .chip4{
-    top: -12px;
-    left: 250px;
+    top: -1vh;
+    left: 60vw;
 }
