@@ -1,5 +1,7 @@
 {
   "name": "HykemDelivery",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
