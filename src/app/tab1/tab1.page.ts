@@ -11,7 +11,7 @@ export class Tab1Page {
     slidesPerView: 3
   };
   slidesOptions2 = {
-    slidesPerView: 2.2
+    slidesPerView: 1.6
   };
   slidesOptions3 = {
     slidesPerView: 2
