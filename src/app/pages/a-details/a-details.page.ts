@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { Data, DataService } from './../../services/data.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NavController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-a-details',
@@ -8,55 +10,47 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class ADetailsPage implements OnInit {
 
+  data: Data = {
+    title: 'nome',
+    subtitle: 'descrição',
+    rating: 5,
+    distance: '10 km',
+    pricemin: 'A partir de R$80',
+    time: '60, 90 min',
+    deliveryprice: 'R$10,00',
+    price: 45,
+    product: 'produto',
+    description: 'descrição do produto',
+  };
+ 
+  dataId = null;
+
   slidesOptions2 = {
     slidesPerView: 2.2
   };
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(private dataService: DataService, private loadingController: LoadingController, private route: ActivatedRoute, private router: Router,) { }
 
   ngOnInit() {
+    this.dataId = this.route.snapshot.params['id'];
+    if (this.dataId)  {
+      this.loadData();
+    }
   }
-
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Albums',
-      cssClass: 'my-custom-class',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        icon: 'trash',
-        handler: () => {
-          console.log('Delete clicked');
-        }
-      }, {
-        text: 'Share',
-        icon: 'share',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
-        text: 'Play (open modal)',
-        icon: 'caret-forward-circle',
-        handler: () => {
-          console.log('Play clicked');
-        }
-      }, {
-        text: 'Favorite',
-        icon: 'heart',
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
-      }]
+ 
+  async loadData() {
+    const loading = await this.loadingController.create({
+      message: 'Loading Data..'
     });
-    await actionSheet.present();
+    await loading.present();
+ 
+    this.dataService.getData(this.dataId).subscribe(res => {
+      loading.dismiss();
+      this.data = res;
+      console.log(this.dataId)
+      console.log(this.data)
+      console.log(res)
+    });
   }
-
-
+ 
 }
