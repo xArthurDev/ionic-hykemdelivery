@@ -24,10 +24,10 @@
       <ion-chip button [routerLink]="['/info-details']" class="chip">
         <ion-icon color="primary" name="arrow-forward-circle-outline"></ion-icon>
       </ion-chip>
-      <ion-card-title button [routerLink]="['/info-details']" class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">HD Assistência</ion-card-title>
+      <ion-card-title button [routerLink]="['/info-details']" class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">{{ data.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 15px; color: #8e8e8f;">
-      Assistência • 8,4 km
+      {{ data.subtitle }} • {{ data.distance }}
     </ion-card-subtitle>
 
     <ion-footer class="footer ion-no-border">
@@ -35,7 +35,7 @@
         <ion-col center text-center>
           <ion-chip button [routerLink]="['/rating-details']" class="chip1">
             <ion-icon size="small" name="star" color="primary"></ion-icon>
-            <ion-label style="font-family:RobotoMedium; font-size: 15px; color: #577ECA;">4,10 (225)</ion-label>
+            <ion-label style="font-family:RobotoMedium; font-size: 15px; color: #577ECA;">{{ data.rating }}</ion-label>
           </ion-chip>
         </ion-col>
       </ion-row>
@@ -63,7 +63,7 @@
       <ion-card-title class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">Hoje,</ion-card-title>
     </ion-card-header>
     <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 14px; color: #8e8e8f;">
-      60, 90 min • R$12,00
+      {{ data.time }} • {{ data.deliveryprice }}
     </ion-card-subtitle>
   </ion-card>
 
