@@ -44,6 +44,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/a-details/a-details.module').then( m => m.ADetailsPageModule)
   },
   {
+    path: 'a-details/:id',
+    loadChildren: () => import('./pages/a-details/a-details.module').then( m => m.ADetailsPageModule)
+  },
+  {
     path: 'info-details',
     loadChildren: () => import('./pages/modal/info-details/info-details.module').then( m => m.InfoDetailsPageModule)
   },
