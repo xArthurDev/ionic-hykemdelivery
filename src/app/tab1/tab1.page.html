@@ -1,9 +1,7 @@
 <ion-content class="ion-padding">
 
-<ion-header class="ion-no-border" [translucent]="true">
-  <ion-toolbar>
-    <ion-img src="../assets/design/hdlogo.png" class="logo"></ion-img>
-  </ion-toolbar>
+<ion-header class="header">
+  <ion-searchbar #searchbar class="input" placeholder="O que procura?" [hidden]="search" (ionInput)="searchAction($event)"></ion-searchbar>  
 </ion-header>
 
 <ion-searchbar #searchbar style="font-family:KeepCalm; font-size: 16px; color: #577ECA;" class="input" placeholder="O que procura?" [hidden]="search" (ionInput)="searchAction($event)"></ion-searchbar>  
