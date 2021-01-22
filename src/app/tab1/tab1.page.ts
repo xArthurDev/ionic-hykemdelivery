@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data, DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-tab1',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  data: Data[];
 
   slidesOptions = {
     slidesPerView: 3
@@ -17,6 +20,12 @@ export class Tab1Page {
     slidesPerView: 2
   };
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
+  ngOnInit() {
+    this.dataService.getAllData().subscribe(res => {
+      this.data = res;
+    });
+  }
 }
+
