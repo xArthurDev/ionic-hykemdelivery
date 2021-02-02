@@ -68,15 +68,8 @@ ion-item:first-child {
     width: 73vw;
     --border-radius: 8px;
 }
-.input {
-    position: absolute;
-    left: 4vw;
-    top: 18vh;
-    height: 7.2vh;
-    width: 82vw;
-}
 .item.item-input {
-    --background: transparent !important;
+    --border-radius: 8px;
 }
 :focus {
     outline: 0;

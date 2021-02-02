@@ -33,10 +33,10 @@
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides">
     <ion-item *ngIf="!data">
-      <ion-skeleton-text animated style="width: 150px; height: 200px"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 150px; height: 200px; box-shadow: none !important;"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of data">
-      <ion-card button [routerLink]="['/a-details', item.id]">
+      <ion-card button [routerLink]="['/a-details', item.id]" style="box-shadow: none !important;">
         <img class="card-image" src="{{ item.image }}">
         <ion-card-header>
           <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
@@ -93,10 +93,10 @@
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides3">
     <ion-item *ngIf="!data">
-      <ion-skeleton-text animated style="width: 150px; height: 200px"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 150px; height: 200px; box-shadow: none !important;"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of data">
-      <ion-card button [routerLink]="['/a-details', item.id]">
+      <ion-card button [routerLink]="['/a-details', item.id]" style="box-shadow: none !important;">
         <img class="card-image" src="{{ item.image }}">
         <ion-card-header>
           <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
@@ -136,7 +136,7 @@
   </ion-item>
   
   <ion-item *ngIf="!data">
-    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated style="box-shadow: none !important;"></ion-skeleton-text>
   </ion-item>
   <ion-card button [routerLink]="['/a-details', item.id]" class="card" *ngFor="let item of data">
     <ion-avatar>
