@@ -22,6 +22,11 @@ export class Tab1Page {
 
   constructor(private dataService: DataService) {}
 
+  ionViewWillEnter() {
+    setTimeout(() => {
+    }, 5000);
+  }
+
   ngOnInit() {
     this.dataService.getAllData().subscribe(res => {
       this.data = res;
