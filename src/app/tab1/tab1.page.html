@@ -1,7 +1,7 @@
 <ion-content class="ion-padding">
 
 <ion-header class="header">
-  <ion-searchbar #searchbar class="input" placeholder="O que procura?" [hidden]="search" (ionInput)="searchAction($event)"></ion-searchbar>  
+  <ion-searchbar #searchbar class="input" placeholder="O que procura?" [hidden]="search" (ionInput)="filterList($event)"></ion-searchbar>  
 </ion-header>
 
 
@@ -27,17 +27,17 @@
   </ion-slides>
 
   <ion-item class="item-title" lines="none">
-    <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA;" slot="start">Assistências Mais Populares</p>
+    <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA; max-inline-size: 200px;" slot="start">Assistências Mais Populares</p>
     <ion-icon button [routerLink]="['/a-details']" color="primary" name="chevron-forward-outline" slot="end">Ver Mais</ion-icon>
   </ion-item>
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides">
     <ion-item *ngIf="!data">
-      <ion-skeleton-text animated style="width: 300px; height: 400px"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 150px; height: 200px"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of data">
       <ion-card button [routerLink]="['/a-details', item.id]">
-        <img src="../../assets/design/img1.jpg">
+        <img class="card-image" src="{{ item.image }}">
         <ion-card-header>
           <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
         </ion-card-header>
@@ -92,170 +92,37 @@
   </ion-item>
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides3">
-    <ion-slide>
-      <ion-card button [routerLink]="['/a-details']">
-        <img src="../../assets/design/img1.jpg">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 150px; height: 200px"></ion-skeleton-text>
+    </ion-item>
+    <ion-slide *ngFor="let item of data">
+      <ion-card button [routerLink]="['/a-details', item.id]">
+        <img class="card-image" src="{{ item.image }}">
         <ion-card-header>
-          <ion-card-title style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
+          <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
         </ion-card-header>
         <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
-          Especializada em Smartphones
+          {{ item.subtitle }}
         </ion-card-subtitle>
       
-        <ion-footer class="ion-no-border">
+        <ion-footer class="footer0 ion-no-border">
           <ion-row>
             <ion-col center text-center>
               <ion-chip>
                 <ion-icon name="star" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">4,8</ion-label>
+                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.rating }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
               <ion-chip>
                 <ion-icon name="navigate" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">6 km</ion-label>
+                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.distance }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
               <ion-chip>
                 <ion-icon name="cash" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">A partir de R$80</ion-label>
-              </ion-chip>
-            </ion-col>
-          </ion-row>
-        </ion-footer>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card button [routerLink]="['/a-details']">
-        <img src="../../assets/design/img2.jpg">
-        <ion-card-header>
-          <ion-card-title style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
-        </ion-card-header>
-        <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
-          Especializada em Smartphones
-        </ion-card-subtitle>
-      
-        <ion-footer class="ion-no-border">
-          <ion-row>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="star" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">4,8</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="navigate" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">6 km</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="cash" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">A partir de R$80</ion-label>
-              </ion-chip>
-            </ion-col>
-          </ion-row>
-        </ion-footer>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card button [routerLink]="['/a-details']">
-        <img src="../../assets/design/img3.jpg">
-        <ion-card-header>
-          <ion-card-title style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
-        </ion-card-header>
-        <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
-          Especializada em Smartphones
-        </ion-card-subtitle>
-      
-        <ion-footer class="ion-no-border">
-          <ion-row>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="star" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">4,8</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="navigate" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">6 km</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="cash" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">A partir de R$80</ion-label>
-              </ion-chip>
-            </ion-col>
-          </ion-row>
-        </ion-footer>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card button [routerLink]="['/a-details']">
-        <img src="../../assets/design/img4.jpg">
-        <ion-card-header>
-          <ion-card-title style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
-        </ion-card-header>
-        <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
-          Especializada em Smartphones
-        </ion-card-subtitle>
-      
-        <ion-footer class="ion-no-border">
-          <ion-row>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="star" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">4,8</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="navigate" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">6 km</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="cash" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">A partir de R$80</ion-label>
-              </ion-chip>
-            </ion-col>
-          </ion-row>
-        </ion-footer>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card button [routerLink]="['/a-details']">
-        <img src="../../assets/design/img4.jpg">
-        <ion-card-header>
-          <ion-card-title style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
-        </ion-card-header>
-        <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
-          Especializada em Smartphones
-        </ion-card-subtitle>
-      
-        <ion-footer class="ion-no-border">
-          <ion-row>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="star" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">4,8</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="navigate" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">6 km</ion-label>
-              </ion-chip>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-chip>
-                <ion-icon name="cash" color="primary"></ion-icon>
-                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">A partir de R$80</ion-label>
+                <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.pricemin }}</ion-label>
               </ion-chip>
             </ion-col>
           </ion-row>
@@ -268,15 +135,18 @@
     <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA;" slot="start">Todas as Assistências</p>
   </ion-item>
   
-  <ion-card button [routerLink]="['/a-details']" class="card">
+  <ion-item *ngIf="!data">
+    <ion-skeleton-text animated></ion-skeleton-text>
+  </ion-item>
+  <ion-card button [routerLink]="['/a-details', item.id]" class="card" *ngFor="let item of data">
     <ion-avatar>
-    <img src="../../assets/design/img1.jpg">
+      <img src="{{ item.image }}">
     </ion-avatar>
     <ion-card-header>
-      <ion-card-title class="title2" style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">HD Consertos de Celulares</ion-card-title>
+      <ion-card-title class="title2" style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
     </ion-card-header>
-    <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 14px; color: #55565c;">
-      Número - 2104 | Tela Quebrada
+    <ion-card-subtitle class="subtitle">
+      {{ item.subtitle }}
     </ion-card-subtitle>
   
     <ion-footer class="footer ion-no-border">
@@ -284,54 +154,19 @@
         <ion-col center text-center>
           <ion-chip>
             <ion-icon name="star" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">4,8</ion-label>
+            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.rating }}</ion-label>
           </ion-chip>
         </ion-col>
         <ion-col center text-center>
           <ion-chip>
             <ion-icon name="navigate" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">6 km</ion-label>
+            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.distance }}</ion-label>
           </ion-chip>
         </ion-col>
         <ion-col center text-center>
           <ion-chip>
             <ion-icon name="cash" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">A partir de R$80</ion-label>
-          </ion-chip>
-        </ion-col>
-      </ion-row>
-    </ion-footer>
-  </ion-card>
-  
-  <ion-card button [routerLink]="['/a-details']" class="card">
-    <ion-avatar>
-    <img src="../../assets/design/img2.jpg">
-    </ion-avatar>
-    <ion-card-header>
-      <ion-card-title class="title2" style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">Computadores LTDA</ion-card-title>
-    </ion-card-header>
-    <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 14px; color: #55565c;">
-      Número - 721 | Perda Total
-    </ion-card-subtitle>
-  
-    <ion-footer class="footer ion-no-border">
-      <ion-row>
-        <ion-col center text-center>
-          <ion-chip>
-            <ion-icon name="star" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">4,8</ion-label>
-          </ion-chip>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-chip>
-            <ion-icon name="navigate" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">6 km</ion-label>
-          </ion-chip>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-chip>
-            <ion-icon name="cash" color="primary"></ion-icon>
-            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">A partir de R$80</ion-label>
+            <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.pricemin }}</ion-label>
           </ion-chip>
         </ion-col>
       </ion-row>

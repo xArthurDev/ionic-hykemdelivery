@@ -45,6 +45,10 @@
     align-items: center;
     color: #fff;
   }
+  .card-image{
+    width: 45vh;
+    height: 45vw;
+  }
   .item-title{
     left: -2vw;
   }
@@ -85,12 +89,16 @@
     background-size: cover;
   }
   .title2{
-    top: -8.5vh;
+    top: -8vh;
     left: 15vw;
   }
   .subtitle{
-    top: -11vh;
+    top: -10vh;
     left: 20vw;
+    max-inline-size: 250px;
+    font-family:RobotoRegular; 
+    font-size: 14px; 
+    color: #9d9fa6;
   }
   .footer{
     top: -8vh;

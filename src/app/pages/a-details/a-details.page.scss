@@ -1,3 +1,6 @@
+.teste{
+    --background-color: linear-gradient(rgba(87, 126, 202, 0.61), rgba(87, 126, 202, 0.61)),
+}
 .image{
     width: 200%;
     height: 200%;
@@ -15,9 +18,8 @@
 }
 .card{
     width: 95vw;
-    height: 7vh;
+    height: 12vh;
     background-size: cover;
-    overflow: visible;
 }
 .title{
     top: -7vh;
@@ -26,17 +28,22 @@
 .subtitle{
     top: -9vh;
     left: 2vw;
+    max-inline-size: 250px;
 }
 .footer{
     top: -80px;
 }
 .chip{
-    top: -3vh;
+    top: 0vh;
     left: 75vw;
 }
+.chip0{
+    top: 0.8vh;
+    left: 25vw;
+}
 .chip1{
-    top: -4vh;
-    left: 65vw;
+    top: 1vh;
+    left: -45vw;
 }
 .chip2{
     top: -5px;
@@ -63,6 +70,7 @@
     width: 46vw;
     height: 6vh;
     background-size: cover;   
+    
 }
 .title3{
     top: -11.5vh;

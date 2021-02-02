@@ -1,9 +1,9 @@
   <ion-header class="ion-no-border" style="height: 100px;">
     <ion-grid>
       <ion-row>
-        <div [style.backgroundImage]="'url(https://i.pinimg.com/originals/cf/8a/99/cf8a99b3758b5ba0deead96b963dffd6.jpg)'"
+        <img src="{{ data.image }}"
           style="height: 100px; width: 100%; background-size: cover; position: absolute; top: 0; left: 0;"
-        ></div>
+        >
         <ion-col>
           <ion-buttons>
               <ion-icon slot="start" button [routerLink]="['/tabs/tab1']" color="primary-contrast" name="chevron-back-outline"></ion-icon>
@@ -18,7 +18,7 @@
 
 <ion-content>
   
-  <ion-card class="card">
+  <ion-card class="card ion-no-border">
     <router-outlet></router-outlet>
     <ion-card-header> 
       <ion-chip button [routerLink]="['/info-details']" class="chip">
@@ -27,15 +27,21 @@
       <ion-card-title button [routerLink]="['/info-details']" class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">{{ data.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 15px; color: #8e8e8f;">
-      {{ data.subtitle }} • {{ data.distance }}
+      {{ data.subtitle }}
     </ion-card-subtitle>
 
     <ion-footer class="footer ion-no-border">
       <ion-row>
         <ion-col center text-center>
-          <ion-chip button [routerLink]="['/rating-details']" class="chip1">
+          <ion-chip button [routerLink]="['/rating-details']" class="chip0">
             <ion-icon size="small" name="star" color="primary"></ion-icon>
             <ion-label style="font-family:RobotoMedium; font-size: 15px; color: #577ECA;">{{ data.rating }}</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-chip class="chip1">
+            <ion-icon size="small" name="navigate" color="primary"></ion-icon>
+            <ion-label style="font-family:RobotoMedium; font-size: 15px; color: #577ECA;">{{ data.distance }}</ion-label>
           </ion-chip>
         </ion-col>
       </ion-row>
