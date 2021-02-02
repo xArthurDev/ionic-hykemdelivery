@@ -69,6 +69,17 @@
   background: #FF9C1A;
 }
 
+ion-loading.transparent {
+  background: #577ECA;
+  .loading-wrapper {
+    background: transparent;
+    box-shadow: none;
+
+    .spinner-crescent circle {
+      stroke-width: 8px;
+    }
+  }
+}
 
 
 :root {
