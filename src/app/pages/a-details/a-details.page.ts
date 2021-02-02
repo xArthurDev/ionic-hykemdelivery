@@ -18,6 +18,8 @@ export class ADetailsPage implements OnInit {
     pricemin: 'A partir de R$80',
     time: '60, 90 min',
     deliveryprice: 'R$10,00',
+    description: 'um estabelecimento...',
+    image: 'imagem'
   };
  
   dataId = null;

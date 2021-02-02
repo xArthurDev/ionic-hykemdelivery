@@ -12,6 +12,8 @@ export interface Data {
   pricemin: string;
   time: string;
   deliveryprice: string;
+  description: string;
+  image: string;
 }
  
 @Injectable({
