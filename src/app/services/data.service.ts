@@ -12,9 +12,6 @@ export interface Data {
   pricemin: string;
   time: string;
   deliveryprice: string;
-  price: number;
-  product: string;
-  description: string;
 }
  
 @Injectable({
@@ -42,20 +39,8 @@ export class DataService {
   getAllData() {
     return this.data;
   }
- 
+
   getData(id) {
     return this.dataCollection.doc<Data>(id).valueChanges();
-  }
- 
-  updateData(data: Data, id: string) {
-    return this.dataCollection.doc(id).update(data);
-  }
- 
-  addData(data: Data) {
-    return this.dataCollection.add(data);
-  }
- 
-  removeData(id) {
-    return this.dataCollection.doc(id).delete();
   }
 }

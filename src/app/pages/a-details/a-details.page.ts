@@ -18,9 +18,6 @@ export class ADetailsPage implements OnInit {
     pricemin: 'A partir de R$80',
     time: '60, 90 min',
     deliveryprice: 'R$10,00',
-    price: 45,
-    product: 'produto',
-    description: 'descrição do produto',
   };
  
   dataId = null;
@@ -40,15 +37,15 @@ export class ADetailsPage implements OnInit {
  
   async loadData() {
     const loading = await this.loadingController.create({
-      message: 'Loading Data..'
+      spinner: 'crescent',
+      cssClass: 'transparent',
+      message: 'Carregando..'
     });
     await loading.present();
  
     this.dataService.getData(this.dataId).subscribe(res => {
-      loading.dismiss();
       this.data = res;
-      console.log(this.dataId)
-      console.log(this.data)
+      loading.dismiss();
       console.log(res)
     });
   }
