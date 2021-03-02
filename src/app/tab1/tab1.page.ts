@@ -24,7 +24,7 @@ export class Tab1Page {
 
   ionViewWillEnter() {
     setTimeout(() => {
-    }, 5000);
+    }, 10000);
   }
 
   ngOnInit() {
