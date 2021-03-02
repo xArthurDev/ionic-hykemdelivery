@@ -50,6 +50,10 @@ ion-item:first-child {
     font-family: 'KeepCalm';
     font-size: 18px;
     letter-spacing: 0px;
+    position:absolute;
+    bottom:0;
+    width: 105vw;
+    left: -5vw;
 }
 .item.item-input {
     --border-radius: 8px;
