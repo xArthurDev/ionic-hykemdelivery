@@ -20,6 +20,10 @@
     font-family: 'KeepCalm';
     font-size: 18px;
     letter-spacing: 0px;
+    position:absolute;
+    bottom:0;
+    width: 105vw;
+    left: -5vw;
 }
 .text0{
     font-family: 'MontserratMedium';
@@ -30,6 +34,7 @@
     position: absolute;
     left: 10vw;
     top: 20vw;
+    color: #fff;
 }
 .text2{
     font-family: 'MontserratBold';
@@ -37,6 +42,7 @@
     position: absolute;
     left: 10vw;
     top: 22vh;
+    color: #fff;
 }
 .arrow{
     width: 7%;
