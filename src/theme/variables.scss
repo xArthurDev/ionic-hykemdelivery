@@ -71,6 +71,7 @@
 
 ion-loading.transparent {
   background: #577ECA;
+  color: #ffffff;
   .loading-wrapper {
     background: transparent;
     box-shadow: none;
@@ -156,7 +157,7 @@ ion-loading.transparent {
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
