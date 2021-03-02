@@ -33,7 +33,7 @@
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides">
     <ion-item *ngIf="!data">
-      <ion-skeleton-text animated style="width: 150px; height: 200px; box-shadow: none !important;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 240px; height: 300px; box-shadow: none !important;"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of data">
       <ion-card button [routerLink]="['/a-details', item.id]" style="box-shadow: none !important;">
@@ -48,19 +48,19 @@
         <ion-footer class="footer0 ion-no-border">
           <ion-row>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="star" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.rating }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="navigate" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.distance }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="cash" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.pricemin }}</ion-label>
               </ion-chip>
@@ -93,7 +93,7 @@
 
   <ion-slides [options]="slidesOptions2" pager="true" class="slides3">
     <ion-item *ngIf="!data">
-      <ion-skeleton-text animated style="width: 150px; height: 200px; box-shadow: none !important;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 240px; height: 300px; box-shadow: none !important;"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of data">
       <ion-card button [routerLink]="['/a-details', item.id]" style="box-shadow: none !important;">
@@ -108,19 +108,19 @@
         <ion-footer class="footer0 ion-no-border">
           <ion-row>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="star" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.rating }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="navigate" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.distance }}</ion-label>
               </ion-chip>
             </ion-col>
             <ion-col center text-center>
-              <ion-chip>
+              <ion-chip class="chip">
                 <ion-icon name="cash" color="primary"></ion-icon>
                 <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.pricemin }}</ion-label>
               </ion-chip>
@@ -136,7 +136,7 @@
   </ion-item>
   
   <ion-item *ngIf="!data">
-    <ion-skeleton-text animated style="box-shadow: none !important;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="box-shadow: none !important; height: 10vh;"></ion-skeleton-text>
   </ion-item>
   <ion-card button [routerLink]="['/a-details', item.id]" class="card" *ngFor="let item of data">
     <ion-avatar>
@@ -152,19 +152,19 @@
     <ion-footer class="footer ion-no-border">
       <ion-row>
         <ion-col center text-center>
-          <ion-chip>
+          <ion-chip class="chip">
             <ion-icon name="star" color="primary"></ion-icon>
             <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.rating }}</ion-label>
           </ion-chip>
         </ion-col>
         <ion-col center text-center>
-          <ion-chip>
+          <ion-chip class="chip">
             <ion-icon name="navigate" color="primary"></ion-icon>
             <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.distance }}</ion-label>
           </ion-chip>
         </ion-col>
         <ion-col center text-center>
-          <ion-chip>
+          <ion-chip class="chip">
             <ion-icon name="cash" color="primary"></ion-icon>
             <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.pricemin }}</ion-label>
           </ion-chip>
