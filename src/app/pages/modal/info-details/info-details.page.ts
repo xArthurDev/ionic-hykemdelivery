@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-info-details',
@@ -8,7 +8,9 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class InfoDetailsPage implements OnInit {
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(
+    public actionSheetController: ActionSheetController,
+    private navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -52,5 +54,9 @@ export class InfoDetailsPage implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+  goBackToAssistanceDetails() {
+    this.navCtrl.back()
   }
 }

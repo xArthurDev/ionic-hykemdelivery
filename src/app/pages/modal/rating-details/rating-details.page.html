@@ -1,6 +1,9 @@
 <ion-content class="ion-padding">
-  <img class="arrow" src="./assets/design/arroww.png" routerLink="/a-details">
-  <router-outlet></router-outlet>
+  <ion-col>
+    <ion-buttons>
+        <ion-icon slot="start" button (click)="goBackToAssistanceDetails()" color="secondary" name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-col>
 
  <ion-item class="title" lines="none">
    <p>AVALIAÇÕES</p>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-schedule-details',
@@ -9,7 +10,9 @@ export class ScheduleDetailsPage implements OnInit {
 
   segment = "today";
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
   }
@@ -20,4 +23,7 @@ export class ScheduleDetailsPage implements OnInit {
     console.log(event);
   }
 
+  goBackToAssistanceDetails() {
+    this.navCtrl.back()
+  }
 }

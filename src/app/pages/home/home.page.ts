@@ -37,6 +37,6 @@ export class HomePage implements OnInit {
   }
 
   goToAssistanceDetailsPage(id) {
-    return this.navCtrl.navigateForward('a-details', id)
+    return this.navCtrl.navigateForward(`assistance-details/${id}`)
   }
 }
