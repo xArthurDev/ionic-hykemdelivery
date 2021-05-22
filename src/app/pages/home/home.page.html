@@ -1,0 +1,177 @@
+<ion-content class="ion-padding">
+
+  <ion-header class="header">
+    <ion-searchbar #searchbar class="input" placeholder="O que procura?" [hidden]="search" (ionInput)="filterList($event)"></ion-searchbar>  
+  </ion-header>
+  
+  
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+    <ion-card class="card2">
+      <h4 style="font-family:MontserratBold; font-size: 15px;">Celulares</h4>
+      <router-outlet></router-outlet>
+    </ion-card>
+      </ion-slide>
+      <ion-slide>
+    <ion-card class="card3">
+      <h4 style="font-family:MontserratBold; font-size: 15px;">Eletrônicos</h4>
+      <router-outlet></router-outlet>
+    </ion-card>
+      </ion-slide>
+      <ion-slide>
+   <ion-card class="card4">
+       <h4 style="font-family:MontserratBold; font-size: 15px;">Tablets</h4>
+       <router-outlet></router-outlet>
+    </ion-card>
+      </ion-slide>
+    </ion-slides>
+  
+    <ion-item class="item-title" lines="none">
+      <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA; max-inline-size: 200px;" slot="start">Assistências Mais Populares</p>
+      <ion-icon button [routerLink]="['/a-details']" color="primary" name="chevron-forward-outline" slot="end">Ver Mais</ion-icon>
+    </ion-item>
+  
+    <ion-slides [options]="slidesOptions2" pager="true" class="slides">
+      <ion-item *ngIf="!data">
+        <ion-skeleton-text animated style="width: 240px; height: 300px; box-shadow: none !important;"></ion-skeleton-text>
+      </ion-item>
+      <ion-slide *ngFor="let item of data">
+        <ion-card (click)="goToAssistanceDetailsPage(item.id)" style="box-shadow: none !important;">
+          <img class="card-image" src="{{ item.image }}">
+          <ion-card-header>
+            <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
+            {{ item.subtitle }}
+          </ion-card-subtitle>
+        
+          <ion-footer class="footer0 ion-no-border">
+            <ion-row>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="star" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.rating }}</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="navigate" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.distance }}</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="cash" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.pricemin }}</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-footer>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  
+    <ion-slides [options]="slidesOptions3" class="slides2">
+      <ion-slide>
+    <ion-card class="card2">
+      <h4 style="font-family:MontserratBold; font-size: 16px;">Delivery</h4>
+      <router-outlet></router-outlet>
+    </ion-card>
+      </ion-slide>
+      <ion-slide>
+    <ion-card class="card3">
+      <h4 style="font-family:MontserratBold; font-size: 16px;">Comprar</h4>
+      <router-outlet></router-outlet>
+    </ion-card>
+      </ion-slide>
+    </ion-slides>
+  
+    <ion-item lines="none" class="item-title2">
+      <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA;" slot="start">Assistências Por Perto</p>
+      <ion-icon button [routerLink]="['/a-details']" color="primary" name="chevron-forward-outline" slot="end">Ver Mais</ion-icon>
+    </ion-item>
+  
+    <ion-slides [options]="slidesOptions2" pager="true" class="slides3">
+      <ion-item *ngIf="!data">
+        <ion-skeleton-text animated style="width: 240px; height: 300px; box-shadow: none !important;"></ion-skeleton-text>
+      </ion-item>
+      <ion-slide *ngFor="let item of data">
+        <ion-card button [routerLink]="['/a-details', item.id]" style="box-shadow: none !important;">
+          <img class="card-image" src="{{ item.image }}">
+          <ion-card-header>
+            <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-subtitle style="font-family:RobotoRegular; font-size: 14px; color: #9d9fa6;">
+            {{ item.subtitle }}
+          </ion-card-subtitle>
+        
+          <ion-footer class="footer0 ion-no-border">
+            <ion-row>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="star" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.rating }}</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="navigate" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.distance }}</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col center text-center>
+                <ion-chip class="chip">
+                  <ion-icon name="cash" color="primary"></ion-icon>
+                  <ion-label style="font-family:KeepCalm; font-size: 12px; color: #577ECA;">{{ item.pricemin }}</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-footer>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  
+    <ion-item lines="none" class="item-title3">
+      <p style="font-family:KeepCalm; font-size: 20px; color: #577ECA;" slot="start">Todas as Assistências</p>
+    </ion-item>
+    
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="box-shadow: none !important; height: 10vh;"></ion-skeleton-text>
+    </ion-item>
+    <ion-card button [routerLink]="['/a-details', item.id]" class="card" *ngFor="let item of data">
+      <ion-avatar>
+        <img src="{{ item.image }}">
+      </ion-avatar>
+      <ion-card-header>
+        <ion-card-title class="title2" style="font-family:KeepCalm; font-size: 16px; color: #FF9C1A;">{{ item.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-subtitle class="subtitle">
+        {{ item.subtitle }}
+      </ion-card-subtitle>
+    
+      <ion-footer class="footer ion-no-border">
+        <ion-row>
+          <ion-col center text-center>
+            <ion-chip class="chip">
+              <ion-icon name="star" color="primary"></ion-icon>
+              <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.rating }}</ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-chip class="chip">
+              <ion-icon name="navigate" color="primary"></ion-icon>
+              <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.distance }}</ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-chip class="chip">
+              <ion-icon name="cash" color="primary"></ion-icon>
+              <ion-label style="font-family:KeepCalm; font-size: 14px; color: #577ECA;">{{ item.pricemin }}</ion-label>
+            </ion-chip>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-card>
+    
+        
+  </ion-content>
