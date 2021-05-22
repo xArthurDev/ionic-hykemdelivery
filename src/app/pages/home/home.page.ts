@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { NavController } from '@ionic/angular'
+import { CommonHelpers } from 'src/app/helpers/commonHelpers'
 import { Data, DataService } from 'src/app/services/data.service'
 
 @Component({
@@ -23,7 +24,8 @@ export class HomePage implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private navCtrl: NavController) {}
+    private navCtrl: NavController,
+    public commonHelpers: CommonHelpers) {}
 
   ionViewWillEnter() {
     setTimeout(() => {
@@ -34,6 +36,7 @@ export class HomePage implements OnInit {
     this.dataService.getAllData().subscribe(res => {
       this.data = res
     })
+    this.commonHelpers.arrivedAtHomePage = true
   }
 
   goToAssistanceDetailsPage(id) {

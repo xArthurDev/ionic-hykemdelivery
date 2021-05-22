@@ -1,4 +1,4 @@
 <ion-app>
-  <tabs-component></tabs-component>
+  <tabs-component *ngIf="this.commonHelpers.arrivedAtHomePage === true"></tabs-component>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
