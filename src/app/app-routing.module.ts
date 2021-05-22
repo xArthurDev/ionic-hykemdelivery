@@ -36,8 +36,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/confirm-cellphone/confirm-cellphone.module').then( m => m.ConfirmCellphonePageModule)
   },
   {
-    path: 'a-details',
-    loadChildren: () => import('./pages/a-details/a-details.module').then( m => m.ADetailsPageModule)
+    path: 'assistance-details/:id',
+    loadChildren: () => import('./pages/assistance-details/assistance-details.module').then( m => m.AssistanceDetailsPageModule)
   },
   {
     path: 'a-details/:id',

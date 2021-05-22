@@ -6,7 +6,7 @@
         >
         <ion-col>
           <ion-buttons>
-              <ion-icon slot="start" button [routerLink]="['/tabs/tab1']" color="primary-contrast" name="chevron-back-outline"></ion-icon>
+              <ion-icon slot="start" button (click)="goBackToHomePage()" color="primary-contrast" name="chevron-back-outline"></ion-icon>
           </ion-buttons>
         </ion-col>
         <ion-col class="sbutton">
@@ -21,10 +21,10 @@
   <ion-card class="card ion-no-border">
     <router-outlet></router-outlet>
     <ion-card-header> 
-      <ion-chip button [routerLink]="['/info-details']" class="chip">
+      <ion-chip (click)="goToInfoDetailsPage()" class="chip">
         <ion-icon color="primary" name="arrow-forward-circle-outline"></ion-icon>
       </ion-chip>
-      <ion-card-title button [routerLink]="['/info-details']" class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">{{ data.title }}</ion-card-title>
+      <ion-card-title (click)="goToInfoDetailsPage()" class="title" style="font-family:KeepCalm; font-size: 18px; color: #577ECA;">{{ data.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-subtitle class="subtitle" style="font-family:RobotoRegular; font-size: 15px; color: #8e8e8f;">
       {{ data.subtitle }}
@@ -33,7 +33,7 @@
     <ion-footer class="footer ion-no-border">
       <ion-row>
         <ion-col center text-center>
-          <ion-chip button [routerLink]="['/rating-details']" class="chip0">
+          <ion-chip (click)="goToRatingDetailsPage()" class="chip0">
             <ion-icon size="small" name="star" color="primary"></ion-icon>
             <ion-label style="font-family:RobotoMedium; font-size: 15px; color: #577ECA;">{{ data.rating }}</ion-label>
           </ion-chip>
@@ -48,7 +48,7 @@
     </ion-footer>
   </ion-card>
 
-  <ion-card button [routerLink]="['/type-details']" class="card3">
+  <ion-card (click)="goToTypeDetailsPage()" class="card3">
     <ion-avatar class="avatar">
       <img src="./assets/design/icon7.png">
     </ion-avatar>
@@ -60,7 +60,7 @@
     </ion-card-header>
   </ion-card>
 
-  <ion-card routerLink="/schedule-details" class="card2">
+  <ion-card (click)="goToScheduleDetailsPage()" class="card2">
   <router-outlet></router-outlet>
     <ion-card-header> 
       <ion-chip class="chip4">
@@ -84,7 +84,7 @@
 
   <ion-slides class="sdestaq" [options]="slidesOptions2" pager="true">
     <ion-slide>
-      <ion-card button [routerLink]="['/a-details']" style="box-shadow: none !important;">
+      <ion-card style="box-shadow: none !important;">
         <img src="../../assets/design/img1.jpg">
         <ion-card-header>
           <ion-card-title style="font-family:KeepCalm; font-size: 18px; color: #FF9C1A;">Produto</ion-card-title>
