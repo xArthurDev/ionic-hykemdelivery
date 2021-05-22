@@ -3,8 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'ae-page',
-    loadChildren: () => import('./pages/ae-page/ae-page.module').then( m => m.AePagePageModule)
+    path: 'app-explaining',
+    loadChildren: () => import('./pages/app-explaining/app-explaining.module').then( m => m.AppExplainingPageModule)
   },
   {
     path: '',
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./pages/ae-page/ae-page.module').then( m => m.AePagePageModule)
+    loadChildren: () => import('./pages/app-explaining/app-explaining.module').then( m => m.AppExplainingPageModule)
   },
   {
     path: 'dashboard',
