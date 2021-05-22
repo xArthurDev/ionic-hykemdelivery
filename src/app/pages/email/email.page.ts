@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailPage implements OnInit {
 
+  currentContentDisplay: string
+
   constructor() { }
 
   ngOnInit() {
+    this.currentContentDisplay = 'email'
   }
 
+  goToConfirmEmailDisplay() {
+    this.currentContentDisplay = 'confirm-email'
+  }
+
+  goBackToEmailDisplay() {
+    this.currentContentDisplay = 'email'
+  }
 }

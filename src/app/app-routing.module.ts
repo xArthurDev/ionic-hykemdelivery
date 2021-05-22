@@ -24,16 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/email/email.module').then( m => m.EmailPageModule)
   },
   {
-    path: 'confirm-email',
-    loadChildren: () => import('./pages/confirm-email/confirm-email.module').then( m => m.ConfirmEmailPageModule)
-  },
-  {
     path: 'cellphone',
     loadChildren: () => import('./pages/cellphone/cellphone.module').then( m => m.CellphonePageModule)
-  },
-  {
-    path: 'confirm-cellphone',
-    loadChildren: () => import('./pages/confirm-cellphone/confirm-cellphone.module').then( m => m.ConfirmCellphonePageModule)
   },
   {
     path: 'assistance-details/:id',

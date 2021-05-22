@@ -1,19 +1,48 @@
 <ion-content>
+  <ion-item class="back-button">
+    <ion-icon 
+      *ngIf="currentContentDisplay === 'email'" 
+      slot="start" 
+      button routerLink="/dashboard" 
+      color="secondary"
+      name="chevron-back-outline">
+    </ion-icon>
+  <router-outlet *ngIf="currentContentDisplay === 'email'"></router-outlet>
 
+    <ion-icon 
+      *ngIf="currentContentDisplay === 'confirm-email'" 
+      slot="start" 
+      button (click)="goBackToEmailDisplay()" 
+      color="secondary"
+      name="chevron-back-outline">
+    </ion-icon>
+  </ion-item>
   <img src="./assets/design/Email.png" class="email">
 
-  <img class="arrow" src="./assets/design/arroww.png" routerLink="/dashboard">
-  <router-outlet></router-outlet>
+  <div *ngIf="currentContentDisplay === 'email'">
+    <ion-text class="text">Qual o seu E-mail?</ion-text>
+    <form class="form">    
+      <ion-item lines="full">
+        <ion-label class="text0" color="medium" position="floating">E-mail</ion-label>
+        <ion-input class="text0" color="primary" type="text" #email required></ion-input>
+      </ion-item>
+    </form>
+    <ion-text class="text2">será enviado um e-mail de confirmação.</ion-text>
 
-  <ion-text class="text">Qual o seu E-mail?</ion-text>
-  <form class="form">    
-    <ion-item lines="full">
-      <ion-label class="text0" color="medium" position="floating">E-mail</ion-label>
-      <ion-input class="text0" color="primary" type="text" #email required></ion-input>
-    </ion-item>
-  </form>
-  <ion-text class="text2">será enviado um e-mail de confirmação.</ion-text>
+    <ion-button class="button" color="warning" expand="full" (click)="goToConfirmEmailDisplay()">CONTINUAR</ion-button>
+  </div>
 
-  <ion-button class="button" color="warning" expand="full" routerLink="/confirm-email">CONTINUAR</ion-button>
-
+  <div *ngIf="currentContentDisplay === 'confirm-email'">
+    <ion-text class="text">Digíte o código que enviamos para 'email'</ion-text>
+    <form class="form">    
+      <ion-item lines="full">
+        <ion-label class="text0" color="medium" position="floating">Código</ion-label>
+        <ion-input class="text0" color="primary" type="number" #number required></ion-input>
+      </ion-item>
+    </form>
+    <ion-button fill="clear" color="light" size="small" class="cbutton">Não recebi meu código</ion-button>
+  
+    <ion-button class="cont" color="warning" expand="full" routerLink="/home">CONTINUAR</ion-button>
+    <router-outlet></router-outlet>
+  </div>
 </ion-content>

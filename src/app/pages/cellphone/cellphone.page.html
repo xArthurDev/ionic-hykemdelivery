@@ -1,23 +1,50 @@
 <ion-content>
+  <ion-item class="back-button">
+    <ion-icon 
+      *ngIf="currentContentDisplay === 'cellphone'" 
+      slot="start" 
+      button routerLink="/dashboard" 
+      color="secondary"
+      name="chevron-back-outline">
+    </ion-icon>
+  <router-outlet *ngIf="currentContentDisplay === 'email'"></router-outlet>
 
+    <ion-icon 
+      *ngIf="currentContentDisplay === 'confirm-cellphone'" 
+      slot="start" 
+      button (click)="goBackToCellphoneDisplay()" 
+      color="secondary"
+      name="chevron-back-outline">
+    </ion-icon>
+  </ion-item>
   <img src="./assets/design/Celular.png" class="email">
 
-  <img class="arrow" src="./assets/design/arroww.png" routerLink="/dashboard">
-  <router-outlet></router-outlet>
+  <div *ngIf="currentContentDisplay === 'cellphone'">  
+    <ion-text class="text">Qual o número do seu celular?</ion-text>
+    <ion-text color="medium" class="text1">Exemplo: (55) 31 9 9999-9999</ion-text>
+    <form class="form">    
+      <ion-item lines="full">
+        <ion-label class="text0" color="medium" position="floating">Número</ion-label>
+        <ion-input class="text0" color="primary" type="number" #number required></ion-input>
+      </ion-item>
+    </form>
+    <ion-text class="text2">Como deseja receber o código?</ion-text>
 
-  <ion-text class="text">Qual o número do seu celular?</ion-text>
-  <ion-text color="medium" class="text1">Exemplo: (55) 31 9 9999-9999</ion-text>
-  <form class="form">    
-    <ion-item lines="full">
-      <ion-label class="text0" color="medium" position="floating">Número</ion-label>
-      <ion-input class="text0" color="primary" type="number" #number required></ion-input>
-    </ion-item>
-  </form>
-  <ion-text class="text2">Como deseja receber o código?</ion-text>
+    <ion-button fill="solid" color="warning" class="wbutton" (click)="goToConfirmCellphoneDisplay()">Receber por WhatsApp</ion-button>
+    <ion-button fill="outline" color="light" class="sbutton" (click)="goToConfirmCellphoneDisplay()">Receber por SMS</ion-button>
+  </div>
 
-  <ion-button fill="solid" color="warning" class="wbutton" routerLink="/confirm-cellphone">Receber por WhatsApp</ion-button>
-  <router-outlet></router-outlet>
-  <ion-button fill="outline" color="light" class="sbutton" routerLink="/confirm-cellphone">Receber por SMS</ion-button>
-  <router-outlet></router-outlet>
-
+  <div *ngIf="currentContentDisplay === 'confirm-cellphone'">
+    <ion-text class="text">Digíte o Código que enviamos para 'numero' por 'metodo'</ion-text>
+    <form class="form">    
+      <ion-item lines="full">
+        <ion-label class="text0" color="medium" position="floating">Código</ion-label>
+        <ion-input class="text0" color="primary" type="number" #number required></ion-input>
+      </ion-item>
+    </form>
+    <ion-button fill="clear" color="light" size="small" class="cbutton">Não recebi meu código</ion-button>
+  
+    <ion-button class="cont" color="warning" expand="full" routerLink="/home">CONTINUAR</ion-button>
+    <router-outlet></router-outlet>
+  </div>
 </ion-content>
