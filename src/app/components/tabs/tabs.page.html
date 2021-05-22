@@ -1,0 +1,18 @@
+<ion-tabs class="tabs">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="goToHomePage()">
+      <ion-icon color="primary" name="home"></ion-icon>
+      <ion-label class="tab-label">Início</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="goToOrdersPage()">
+      <ion-icon color="primary" name="receipt"></ion-icon>
+      <ion-label class="tab-label">Pedidos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="goToProfilePage()">
+      <ion-icon color="primary" name="person-circle"></ion-icon>
+      <ion-label class="tab-label">Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
