@@ -3,14 +3,11 @@
   <img src="./assets/design/Login e Cadastro.png" class="dash">
 
   <ion-text class="text">Como deseja continuar?</ion-text>
-  <img class="button1" src="./assets/design/button1.png" routerLink="/ae-page">
-  <router-outlet></router-outlet>
+  <img class="button1" src="./assets/design/button1.png">
 
-  <img class="button2" src="./assets/design/button2.png" routerLink="/email">
-  <router-outlet></router-outlet>
+  <img class="button2" src="./assets/design/button2.png" (click)="goToEmailPage()">
 
-  <img class="button3" src="./assets/design/button3.png" routerLink="/cellphone">
-  <router-outlet></router-outlet>
+  <img class="button3" src="./assets/design/button3.png" (click)="goToCellphonePage()">
 
 </ion-content>
 

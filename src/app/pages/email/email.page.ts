@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-email',
@@ -9,7 +10,9 @@ export class EmailPage implements OnInit {
 
   currentContentDisplay: string
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
     this.currentContentDisplay = 'email'
@@ -21,5 +24,13 @@ export class EmailPage implements OnInit {
 
   goBackToEmailDisplay() {
     this.currentContentDisplay = 'email'
+  }
+
+  goBackToDashboard() {
+    this.navCtrl.back()
+  }
+
+  goToHomePage() {
+    return this.navCtrl.navigateForward('home')
   }
 }

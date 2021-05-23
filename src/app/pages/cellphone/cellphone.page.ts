@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cellphone',
@@ -9,7 +10,9 @@ export class CellphonePage implements OnInit {
 
   currentContentDisplay: string
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
     this.currentContentDisplay = 'cellphone'
@@ -21,5 +24,13 @@ export class CellphonePage implements OnInit {
 
   goBackToCellphoneDisplay() {
     this.currentContentDisplay = 'cellphone'
+  }
+
+  goBackToDashboard() {
+    this.navCtrl.back()
+  }
+
+  goToHomePage() {
+    return this.navCtrl.navigateForward('home')
   }
 }
