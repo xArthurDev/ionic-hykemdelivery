@@ -14,10 +14,12 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { TabsPage } from './components/tabs/tabs.page';
 import { TabsPageModule } from './components/tabs/tabs.module';
+import { TypeDetailsPage } from './pages/modal/type-details/type-details.page';
+import { ScheduleDetailsPage } from './pages/modal/schedule-details/schedule-details.page';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, TypeDetailsPage, ScheduleDetailsPage],
+  entryComponents: [TypeDetailsPage, ScheduleDetailsPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, TabsPageModule],

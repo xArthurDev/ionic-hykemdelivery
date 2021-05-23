@@ -3,6 +3,11 @@
 
 /** Ionic CSS Variables **/
 
+.assistance-modal {
+  --height:60%;
+  align-items: flex-end;
+}
+
 @font-face {
   font-family: 'Coolvetica';
   src: url('../assets/fonts/coolvetica.ttf');

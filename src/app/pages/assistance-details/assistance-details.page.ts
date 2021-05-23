@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { Data, DataService } from '../../services/data.service'
 import { ActivatedRoute, Router } from '@angular/router'
-import { NavController, LoadingController } from '@ionic/angular'
+import { NavController, LoadingController, ModalController } from '@ionic/angular'
+import { TypeDetailsPage } from '../modal/type-details/type-details.page'
+import { ScheduleDetailsPage } from '../modal/schedule-details/schedule-details.page'
 
 @Component({
   selector: 'app-assistance-details',
@@ -19,12 +21,14 @@ export class AssistanceDetailsPage implements OnInit {
     time: '60, 90 min',
     deliveryprice: 'R$10,00',
     description: 'um estabelecimento...',
-    image: 'imagem'
+    image: ''
   }
  
   dataId = null
 
   basePath = 'assistance-details'
+
+  modalCurrentView: any
 
   slidesOptions2 = {
     slidesPerView: 2.2
@@ -34,7 +38,8 @@ export class AssistanceDetailsPage implements OnInit {
     private dataService: DataService, 
     private loadingController: LoadingController, 
     private route: ActivatedRoute, 
-    private navCtrl: NavController) { }
+    private navCtrl: NavController,
+    private modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.dataId = this.route.snapshot.params['id']
@@ -58,6 +63,27 @@ export class AssistanceDetailsPage implements OnInit {
     })
   }
 
+  selectTypeDetails() {
+    this.modalCurrentView = TypeDetailsPage
+    return this.OpenModal()
+  }
+
+  selectScheduleDetails() {
+    this.modalCurrentView = ScheduleDetailsPage
+    return this.OpenModal()
+  }
+
+  async OpenModal() {
+    const assistanceDetailsModal = await this.modalCtrl.create({
+      component: this.modalCurrentView,
+      showBackdrop: true,
+      mode: 'ios',
+      cssClass: 'assistance-modal'
+    })
+
+    return await assistanceDetailsModal.present();
+  }
+
   goBackToHomePage() {
     this.navCtrl.back()
   }
@@ -68,13 +94,5 @@ export class AssistanceDetailsPage implements OnInit {
 
   goToRatingDetailsPage() {
     return this.navCtrl.navigateForward(`${this.basePath}/${this.dataId}/rating-details`)
-  }
-
-  goToTypeDetailsPage() {
-    return this.navCtrl.navigateForward(`${this.basePath}/${this.dataId}/type-details`)
-  }
-
-  goToScheduleDetailsPage() {
-    return this.navCtrl.navigateForward(`${this.basePath}/${this.dataId}/schedule-details`)
   }
 }

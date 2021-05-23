@@ -36,14 +36,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/modal/info-details/info-details.module').then( m => m.InfoDetailsPageModule)
   },
   {
-    path: 'assistance-details/:id:/schedule-details',
-    loadChildren: () => import('./pages/modal/schedule-details/schedule-details.module').then( m => m.ScheduleDetailsPageModule)
-  },
-  {
-    path: 'assistance-details/:id:/type-details',
-    loadChildren: () => import('./pages/modal/type-details/type-details.module').then( m => m.TypeDetailsPageModule)
-  },
-  {
     path: 'assistance-details/:id:/rating-details',
     loadChildren: () => import('./pages/modal/rating-details/rating-details.module').then( m => m.RatingDetailsPageModule)
   },
