@@ -1,84 +1,156 @@
-:focus {
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
+.header {
+    height: 60px; 
+    background-color: #fff;
+    text-align: center; 
+    color: #000000; 
+    font-family: 'MontserratBold'; 
+    font-size: 25px;
 }
-.card{
+
+.text-info {
+    color: #000000; 
+    text-align: center; 
+    font-size: 15px; 
+    font-family: 'MontserratLight';
+}
+
+.card {
     top: 10px;
     width: 95vw;
     height: 18vh;
     background-size: cover;
+    box-shadow: none !important;
 }
-.card2{
+
+.card2 {
     top: 10px;
     width: 95vw;
     height: 18vh;
     background-size: cover;
+    box-shadow: none !important;
 }
-.title2{
+
+.title2 {
+    font-family: 'KeepCalm'; 
+    font-size: 16px;
+    color: #FF9C1A;
     top: -7vh;
     left: 17vw;
 }
-.subtitle{
+
+.subtitle {
+    font-family: 'MontserratMedium'; 
+    font-size: 11px; 
+    color: #55565c;
     top: -10vh;
     left: 21vw;
     max-inline-size: 250px;
 }
-.footer{
+
+.footer {
+    font-family:MontserratMedium; 
+    font-size: 12px; 
+    color: #7d7e80;
     top: -130px;
 }
-.avatar{
+
+.footer2 {
+    font-family:'MontserratMedium';
+    font-size: 12px; 
+    color: #7d7e80;
+    top: -130px;
+}
+
+.avatar {
     width: 50px;
     height: 50px;
 }
-.check1{
+
+.check1 {
     white-space: nowrap;
     top: 6vh;
     left: 18vw;
 }
-.check2{
+
+.check2 {
     white-space: nowrap;
     top: 5vh;
     left: 18vw;
 }
-.check3{
+
+.check3 {
     white-space: nowrap;
     top: 4vh;
     left: 18vw;
 }
-.col{
+
+.col {
     max-inline-size: 250px;
     top: 5vh;
     left: 20vw;
 }
-.col2{
+
+.col2 {
     white-space: nowrap;
     top: 0px;
     left: 80px;
 }
-.col3{
+
+.col3 {
     white-space: nowrap;
     top: 16px;
     left: -200px;
 }
-.card4{
+
+.card4 {
     width: 95vw;
     height: 7vh;
     top: 1vh;
     background-size: cover;
+    box-shadow: none !important;
 }
-.title4{
+
+.title4 {
+    font-family: 'KeepCalm'; 
+    font-size: 20px; 
+    color: #55565c; 
+    text-align: center;
     top: -6vh;
     left: -5vw;
 }
-.subtitle4{
+
+.subtitle4 {
     top: -80px;
     left: 5px;
 }
-.footer4{
+
+.footer4 {
     top: -80px;
 }
-.chip4{
+
+.chip4 {
     top: -1vh;
     left: 60vw;
+    background: none;
+}
+
+.chip5 {
+    font-family: 'MontserratBold'; 
+    font-size: 12px; 
+    color: #55565c;
+    background: none;
+}
+
+.payment-title {
+    font-family: 'KeepCalm';
+    color: #55565c; 
+    font-size: 20px; 
+    text-align: start;
+}
+
+.footer-text {
+    color: #686868; 
+    text-align: center; 
+    font-size: 15px; 
+    font-family: 'MontserratLight';
 }

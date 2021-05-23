@@ -1,11 +1,12 @@
-.card{
+.card {
     width: 95vw;
     height: 10vh;
     left: -3vw;
     background-size: cover;
     box-shadow: none !important;
 }
-.card1{
+
+.card1 {
     width: 95vw;
     height: 6vh;
     left: -2vw;
@@ -13,29 +14,44 @@
     background-size: cover;
     box-shadow: none !important;
 }
-.title{
+
+.title {
+    font-family: 'MontserratBold'; 
+    font-size: 18px; 
+    color: #577ECA;
     top: -12.5vh;
     left: 17vw;
 }
-.title2{
+
+.title2 {
+    font-family: 'MontserratBold'; 
+    font-size: 18px; 
+    color: #577ECA;
     top: -11.5vh;
     left: 17vw;
 }
-.subtitle{
+
+.subtitle {
+    font-family: 'MontserratBold'; 
+    font-size: 13px; 
+    color: #8e8e8f;
     top: -14.5vh;
     left: 22vw;
 }
-.chip{
+
+.chip {
     top: -8.5vh;
     left: 75vw;
     background: none;
 }
-.chip1{
+
+.chip1 {
     top: -7.5vh;
     left: 75vw;
     background: none;
 }
-.icons{
+
+.icons {
     width: 40px;
     height: 40px;
 }

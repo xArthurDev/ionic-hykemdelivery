@@ -1,19 +1,65 @@
+.header-row {
+    height: 10vh;
+    width: 100%;
+}
+
+.header-title {
+    text-align: center; 
+    color: #000000; 
+    font-family: 'MontserratBold'; 
+    font-size: 22px;
+}
+
+.segment-title {
+    font-family: 'KeepCalm'; 
+    font-size: 20px; 
+    color: #ecb603;
+}
+
+.segment-subtitle {
+    font-family: 'KeepCalm'; 
+    font-size: 20px; 
+    color: #000000;
+}
+
+.schedule-label {
+    font-size: 16.5px;
+    color: #55565c; 
+    text-align: left; 
+    font-family: 'MontserratBold';
+}
+
+.schedule-strong {
+    color: #55565c; 
+    text-align: left; 
+    font-family: 'MontserratBold';
+}
+
+.sub {
+    color: #7e7e81; 
+    text-align: left; 
+    font-family: 'MontserratBold';
+    left: -46vw;
+    top: 2vh;
+}
+
+.button {
+    font-family: 'MontserratBold';
+    font-size: 18px;
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 :focus {
     outline: 0;
     outline-color: transparent;
     outline-style: none;
-}
-.sub{
-    left: -46vw;
-    top: 2vh;
-}
-.button{
-    font-family: 'MontserratBold';
-    font-size: 18px;
-    letter-spacing: 0px;
-    position:absolute;
-    bottom:0;
-    width: 105vw;
-    left: -5vw;
 }
  

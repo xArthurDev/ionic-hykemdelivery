@@ -6,10 +6,12 @@ ion-toolbar {
     background-size: cover;
     --background: url('/assets/design/Gradiente.png'); 
  }
- .logo {
+
+.logo {
     height: 6vh;
-  }
-  .card2{
+}
+
+.card2 {
     width: 1000vw;
     height: 10vh;
     left: -2vw;
@@ -20,8 +22,9 @@ ion-toolbar {
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-  .card3{
+}
+
+.card3 {
     width: 1000vw;
     height: 10vh;
     left: 0vw;
@@ -32,8 +35,9 @@ ion-toolbar {
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-  .card4{
+}
+
+.card4 {
     width: 1000vw;
     height: 10vh;
     left: 2vw;
@@ -44,84 +48,151 @@ ion-toolbar {
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-  .card-image{
+}
+
+.card-label {
+    font-family:'MontserratBold'; 
+    font-size: 15px;
+}
+
+.card-image {
     width: 45vh;
     height: 45vw;
-  }
-  .item-title{
+}
+
+.card-title {
+    font-family: 'KeepCalm'; 
+    font-size: 18px;
+    color: #FF9C1A;
+}
+
+.card-subtitle {
+    font-family: 'RobotoRegular'; 
+    font-size: 14px; 
+    color: #9d9fa6;
+}
+
+.main-card {
+  box-shadow: none !important;
+}
+
+.skeleton-card {
+    width: 55vw; 
+    height: 40vh; 
+    box-shadow: none !important;
+}
+
+.skeleton-card2 {
+    box-shadow: none !important; 
+    height: 10vh;
+}
+
+.item-title {
     left: -2vw;
-  }
-  .item-title2{
+}
+
+.item-label {
+    font-family:'KeepCalm'; 
+    font-size: 20px; 
+    color: #577ECA; 
+    max-inline-size: 200px;
+}
+
+.item-label2 {
+  font-family:'KeepCalm'; 
+  font-size: 20px; 
+  color: #577ECA; 
+}
+
+.item-title2 {
     left: -2vw;
-  }
-  .item-title3{
+}
+
+.item-title3 {
     left: -2vw;
-  }
-  .slides{
+}
+
+.slides {
     left: -1vw;
-  }
-  .slides2{
+}
+
+.slides2 {
     left: 2vw;
-  }
-  .slides3{
+}
+
+.slides3 {
     left: -1vw;
-  }
+}
+
 .input::-webkit-input-placeholder {
     font-family: 'Coolvetica';
-  }
+}
   
-  .input:-ms-input-placeholder {
+.input:-ms-input-placeholder {
     font-family: 'Coolvetica';
-  }
+}
   
-  .input:-moz-placeholder {
+.input:-moz-placeholder {
     font-family: 'Coolvetica';
-  }
+}
   
-  .input::-moz-placeholder {
+.input::-moz-placeholder {
     font-family: 'Coolvetica';
-  }
-  .card{
+}
+
+.card {
     width: 95vw;
     height: 14vh;
     left: -4vw;
     background-size: cover;
     box-shadow: none !important;
-  }
-  .title2{
+}
+
+.title2 {
+    font-family: 'KeepCalm'; 
+    font-size: 18px;
+    color: #FF9C1A;
     top: -8vh;
     left: 15vw;
-  }
-  .subtitle{
+}
+
+.subtitle {
     top: -10vh;
     left: 20vw;
     max-inline-size: 250px;
     font-family:RobotoRegular; 
     font-size: 14px; 
     color: #9d9fa6;
-  }
-  .footer{
-    top: -8vh;
-  }
-  :focus {
-  outline: 0;
-  outline-color: transparent;
-  outline-style: none;
-  }
-.input {
-  width: 100vw;
-  left: -4vw;
-  top: -1vh;
-  font-family: 'KeepCalm'; 
-  font-size: 16px;
-  color: #577ECA;
-  }
-.header {
-  background-color: #577ECA;
-  width: 0vw;
-  top: -1vh;
 }
+
+.footer {
+    top: -8vh;
+}
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.input {
+    width: 100vw;
+    left: -4vw;
+    top: -1vh;
+    font-family: 'KeepCalm'; 
+    font-size: 16px;
+    color: #577ECA;
+}
+
+.header {
+    background-color: #577ECA;
+    width: 0vw;
+    top: -1vh;
+}
+
 .chip {
-  background: none;
+    font-family:'KeepCalm'; 
+    font-size: 12px; 
+    color: #577ECA;
+    background: none;
 } 

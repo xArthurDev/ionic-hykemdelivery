@@ -1,122 +1,98 @@
- <ion-content>
-  <ion-grid style="height: 60px; background-color: #fff;">
-    <ion-row>
-      <ion-col size="2">
-        <ion-buttons>
-          <ion-icon slot="start" button (click)="goBackToAssistanceDetails()" color="secondary"
-            name="chevron-back-outline"></ion-icon>
-        </ion-buttons>
-      </ion-col>
-      <ion-col size="auto">
-        <ion-title class="ion-text-center" style="text-align: center; color: #000000; font-family: MontserratBold; font-size: 25px;">
-          Escolha uma opção
-        </ion-title>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content>
+<ion-row class="header-row">
+  <ion-col>
+    <ion-title class="header-title ion-text-center">
+      Escolha uma opção
+    </ion-title>
+  </ion-col>
+</ion-row>
 
+<ion-row>
   <ion-segment 
     value="today" 
-    color="warning"
+    color="warning" 
     scrollable="false"
-    mode="md"
-    [(ngModel)]="segment" 
+    mode="md" 
     (ionChange)="segmentChanged($event)">
 
-      <ion-segment-button value="today" mode="md">
-        <ion-label style="font-family:KeepCalm; font-size: 16.5px; color: #ecb603;">Hoje,</ion-label>
-        <span style="font-family:KeepCalm; font-size: 16.5px; color: #000000;">5</span>
-      </ion-segment-button>
+    <ion-segment-button value="today" mode="md">
+      <ion-label class="segment-title">Hoje,</ion-label>
+      <span class="segment-subtitle">5</span>
+    </ion-segment-button>
 
-      <ion-segment-button value="tomorrow" mode="md">
-        <ion-label style="font-family:KeepCalm; font-size: 16.5px; color: #ecb603;">Amanhã,</ion-label>
-        <span style="font-family:KeepCalm; font-size: 16.5px; color: #000000;">6</span>
-      </ion-segment-button>
+    <ion-segment-button value="tomorrow" mode="md">
+      <ion-label class="segment-title">Amanhã,</ion-label>
+      <span class="segment-subtitle">6</span>
+    </ion-segment-button>
 
-    </ion-segment>
+  </ion-segment>
 
-
-    
-
-      <div *ngIf="segment === 'today'">
-        
-        <ion-list>
-          <ion-radio-group>
-            <ion-list-header>
-              <ion-label style="text-align: left; color: #000000; font-family: KeepCalm; font-size: 25px;">
-                Para agora
-              </ion-label>
-            </ion-list-header>
-        
-            <ion-item lines="none">
-              <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">Entrega Padrão</ion-label>
-              <sub class="sub" style="color: #7e7e81; text-align: left; font-family: MontserratBold;">20 - 30 min</sub>
-              <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
-              <ion-radio color="warning" slot="end"></ion-radio>
-            </ion-item>
-         
+  <div *ngIf="segment === 'today'">
+    <ion-list>
+      <ion-radio-group>
         <ion-list-header>
-          <ion-label style="text-align: left; color: #000000; font-family: KeepCalm; font-size: 25px;">
-            Agendamento
+          <ion-label class="schedule-title">
+            Para agora
           </ion-label>
         </ion-list-header>
-    
+
         <ion-item lines="none">
-          <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">17:30 - 18:00</ion-label>
-          <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
+          <ion-label class="schedule-label">Entrega Padrão</ion-label>
+          <sub class="sub">20 - 30 min</sub>
+          <strong class="schedule-strong">R$10,00</strong>
           <ion-radio color="warning" slot="end"></ion-radio>
         </ion-item>
-    
+
+        <ion-list-header>
+          <ion-label class="schedule-title">
+            Agendamento pra hoje
+          </ion-label>
+        </ion-list-header>
+
         <ion-item lines="none">
-          <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">18:00 - 18:30</ion-label>
-          <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
+          <ion-label class="schedule-label">17:30 - 18:00</ion-label>
+          <strong class="schedule-strong">R$10,00</strong>
           <ion-radio color="warning" slot="end"></ion-radio>
         </ion-item>
-    
+
         <ion-item lines="none">
-          <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">18:30 - 19:00</ion-label>
-          <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
+          <ion-label class="schedule-label">18:00 - 18:30</ion-label>
+          <strong class="schedule-strong">R$10,00</strong>
           <ion-radio color="warning" slot="end"></ion-radio>
         </ion-item>
+
       </ion-radio-group>
-      
-     </ion-list>
-
-     <ion-button class="button" color="warning" expand="full" routerLink="/">CONTINUAR</ion-button>
-    </div>
-    
-      
-      <div *ngIf="segment === 'tomorrow'">
-      <ion-list>
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label style="text-align: left; color: #000000; font-family:KeepCalm; font-size: 25px;">
-              Agendamento
-            </ion-label>
-          </ion-list-header>
-      
-          <ion-item lines="none">
-            <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">17:30 - 18:00</ion-label>
-            <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
-            <ion-radio color="warning" slot="end"></ion-radio>
-          </ion-item>
-      
-          <ion-item lines="none">
-            <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">18:00 - 18:30</ion-label>
-            <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
-            <ion-radio color="warning" slot="end"></ion-radio>
-          </ion-item>
-      
-          <ion-item lines="none">
-            <ion-label style="color: #55565c; text-align: left; font-family: MontserratBold;">18:30 - 19:00</ion-label>
-            <strong style="color: #000000; text-align: left; font-family: MontserratBold;">R$10,00</strong>
-            <ion-radio color="warning" slot="end"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-        
     </ion-list>
-
-    <ion-button class="button" color="warning" expand="full" routerLink="/">CONTINUAR</ion-button>
   </div>
-  
+
+  <div *ngIf="segment === 'tomorrow'">
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label class="schedule-title">
+            Agendamento pra amanhã
+          </ion-label>
+        </ion-list-header>
+
+        <ion-item lines="none">
+          <ion-label class="schedule-label">17:30 - 18:00</ion-label>
+          <strong class="schedule-strong">R$10,00</strong>
+          <ion-radio color="warning" slot="end"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label class="schedule-label">18:00 - 18:30</ion-label>
+          <strong class="schedule-strong">R$10,00</strong>
+          <ion-radio color="warning" slot="end"></ion-radio>
+        </ion-item>
+      </ion-radio-group>     
+    </ion-list>
+  </div>
+</ion-row>
+
+<ion-row>
+  <div class="footer">
+    <ion-button class="button" color="warning" expand="full">CONTINUAR</ion-button>
+  </div>
+</ion-row>
 </ion-content>

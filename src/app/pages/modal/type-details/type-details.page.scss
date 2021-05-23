@@ -1,17 +1,33 @@
-:focus {
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
+.header {
+    height: 60px; 
+    background-color: #fff;
 }
-.sub{
+
+.header-title {
+    text-align: center; 
+    color: #000000; 
+    font-family: 'MontserratBold'; 
+    font-size: 25px;
+}
+
+.question-label {
+    text-align: left; 
+    color: #000000; 
+    font-family: 'KeepCalm'; 
+    font-size: 18px;
+}
+
+.sub {
     left: -48vw;
     top: 2vh;
 }
-.sub2{
+
+.sub2 {
     left: -51vw;
     top: 2vh;
 }
-.button{
+
+.button {
     font-family: 'MontserratBold';
     font-size: 18px;
     letter-spacing: 0px;
@@ -19,4 +35,10 @@
     bottom:0;
     width: 105vw;
     left: -5vw;
+}
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
 }

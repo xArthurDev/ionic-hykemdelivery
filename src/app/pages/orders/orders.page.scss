@@ -6,20 +6,34 @@
 .sticky + .content {
     padding-top: 10vh;
 }
-.htitle{
+
+.htitle {
+    font-family: 'MontserratBold'; 
+    font-size: 28px; 
+    color: #FF9C1A;
+    top: 10px; 
+    position: center;
     position: fixed;
     left: 26.5vw;
-    top: 5vh;
 }
-.ftitle{
+
+.ftitle {
+    font-family: 'KeepCalm'; 
+    font-size: 24px; 
+    color: #577ECA;
     top: -6vh;
     left: -3vw;
 }
-.ttitle{
+
+.ttitle {
+    font-family:'MontserratBold'; 
+    font-size: 16px; 
+    color: #2a2b2e;
     top: -8vh;
     left: -3vw;
 }
-.card{
+
+.card {
     top: -80px;
     width: 95vw;
     height: 18vh;
@@ -27,31 +41,46 @@
     background-size: cover;
     box-shadow: none !important;
 }
-.title2{
+
+.title2 {
+    font-family:'KeepCalm'; 
+    font-size: 18px; 
+    color: #FF9C1A;
     top: -8.5vh;
     left: 15vw;
 }
-.subtitle{
+
+.subtitle {
+    font-family: 'MontserratMedium'; 
+    font-size: 13px; 
+    color: #55565c;
     top: -11vh;
     left: 20vw;
 }
-.footer{
+
+.footer {
     top: -7vh;
 }
-.abutton{
+
+.abutton {
     font-family: 'KeepCalm';
     position: absolute;
     left: -2vw;
     top: 5vh;
     letter-spacing: 0.5px;
 }
-.dbutton{
+
+.dbutton {
     font-family: 'KeepCalm';
     position: absolute;
     left: -55vw;
     top: 5vh;
     letter-spacing: 0.5px;
 }
-.chip{
+
+.chip {
+    font-family: 'KeepCalm'; 
+    font-size: 13px; 
+    color: #577ECA;
     background: none;
 }
