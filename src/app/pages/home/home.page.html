@@ -30,9 +30,14 @@
     </ion-item>
   
     <ion-slides [options]="slidesOptions2" pager="true" class="slides">
-      <ion-item *ngIf="!data">
-        <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
-      </ion-item>
+      <ion-row *ngIf="!data">
+        <ion-col size="6">
+          <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
       <ion-slide *ngFor="let item of data">
         <ion-card (click)="goToAssistanceDetailsPage(item.id)" class="main-card">
           <img class="card-image" src="{{ item.image }}">
@@ -88,9 +93,14 @@
     </ion-item>
   
     <ion-slides [options]="slidesOptions2" pager="true" class="slides3">
-      <ion-item *ngIf="!data">
-        <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
-      </ion-item>
+      <ion-row *ngIf="!data">
+        <ion-col size="6">
+          <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated class="skeleton-card"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
       <ion-slide *ngFor="let item of data">
         <ion-card (click)="goToAssistanceDetailsPage(item.id)" class="main-card">
           <img class="card-image" src="{{ item.image }}">
