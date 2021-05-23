@@ -1,64 +1,23 @@
-.slide1{
+.main-slide {
     width: 100%;
     height: 100%;
-    background: fixed,
-    url('/assets/design/AppExplaining - 1.png');
+    background: fixed;
     background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     color: #fff;
-  }
-  .slide2{
-    width: 100%;
-    height: 100%;
-    background: fixed,
-    url('/assets/design/AE – 2.png');
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    color: #fff;
-  }
-  .slide3{
-    width: 100%;
-    height: 100%;
-    background: fixed,
-    url('/assets/design/AE – 3.png');
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    color: #fff;
-  }
-  .slide4{
-    width: 100%;
-    height: 100%;
-    background: fixed,
-    url('/assets/design/AE – 4.png');
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    color: #fff;
-  }
-  ion-slides {
+}
+
+.main-slides {
     --bullet-background-active: #577ECA;
  }
+
  .button {
-  position: absolute;
-  left: 20px;
-  top: 550px;
-  }
-  :focus {
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
-  }
+    position: absolute;
+    top: 95vh;
+}
 
   .start-button {
     font-family: 'Coolvetica';
@@ -74,10 +33,16 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febf01', endColorstr='#ff9c1a',GradientType=0 ); /* IE6-9 */
   }
 
-  .cbutton{
+.ignore-button {
     font-family: 'Coolvetica';
     position: absolute;
-    left: 10px;
-    top: 780px;
+    left: 1vw;
+    top: 95vh;
     letter-spacing: 1.2px;
+}
+
+:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
 }

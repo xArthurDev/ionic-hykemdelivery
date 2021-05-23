@@ -1,23 +1,18 @@
 <ion-content>
-  
-
-
-  <ion-slides [options]="slidesOptions" pager="true">
+  <ion-slides [options]="slidesOptions" pager="true" class="main-slides">
     <ion-slide>
-      <img src="./assets/design/AppExplaining - 1.png" class="slide1">
-      <ion-button fill="clear" color="primary" size="small" class="cbutton" (click)="goToDashboard()">Ignorar</ion-button>
+      <img src="./assets/design/AppExplaining - 1.png" class="main-slide">
+      <ion-button fill="clear" color="primary" size="small" class="ignore-button" (click)="goToDashboard()">Ignorar</ion-button>
     </ion-slide>
     <ion-slide>
-      <img src="./assets/design/AE – 2.png" class="slide2">
+      <img src="./assets/design/AE – 2.png" class="main-slide">
     </ion-slide>
     <ion-slide>
-      <img src="./assets/design/AE – 3.png" class="slide3">
+      <img src="./assets/design/AE – 3.png" class="main-slide">
     </ion-slide>
-    <ion-slide>
-      <img src="./assets/design/AE – 4.png" class="slide4">
+    <ion-slide class="ion-text-center">
+      <img src="./assets/design/AE – 4.png" class="main-slide">
       <ion-button size="large" expand="block" type="button" class="start-button" (click)="goToDashboard()">COMEÇAR!</ion-button>
     </ion-slide>
   </ion-slides>
-  
-
 </ion-content>
