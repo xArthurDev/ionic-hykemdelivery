@@ -9,4 +9,6 @@ export class CommonHelpers {
     constructor() {}
 
   arrivedAtHomePage: boolean
+  
+  otherOptionsModal: any
 }

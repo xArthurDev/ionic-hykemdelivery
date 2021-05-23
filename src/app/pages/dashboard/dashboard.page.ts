@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { CommonHelpers } from 'src/app/helpers/commonHelpers';
+import { OtherOptionsPage } from '../modal/other-options/other-options.page';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,17 +11,22 @@ import { NavController } from '@ionic/angular';
 export class DashboardPage implements OnInit {
 
   constructor(
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private modalCtrl: ModalController,
+    public commonHelpers: CommonHelpers
   ) { }
 
   ngOnInit() {
   }
 
-  goToEmailPage() {
-    return this.navCtrl.navigateForward('email')
-  }
+  async openModal() {
+    this.commonHelpers.otherOptionsModal = await this.modalCtrl.create({
+      component: OtherOptionsPage,
+      showBackdrop: true,
+      mode: 'ios',
+      cssClass: 'other-options-modal'
+    })
 
-  goToCellphonePage() {
-    return this.navCtrl.navigateForward('cellphone')
+    return await this.commonHelpers.otherOptionsModal.present()
   }
 }

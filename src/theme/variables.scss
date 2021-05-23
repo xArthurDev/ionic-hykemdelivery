@@ -8,6 +8,11 @@
   align-items: flex-end;
 }
 
+.other-options-modal {
+  --height:20%;
+  align-items: flex-end;
+}
+
 @font-face {
   font-family: 'Coolvetica';
   src: url('../assets/fonts/coolvetica.ttf');
@@ -106,7 +111,7 @@ ion-loading.transparent {
   --ion-color-secondary-tint: #50c8ff;
 
   /** tertiary **/
-  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary: #417efa;
   --ion-color-tertiary-rgb: 82, 96, 255;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
@@ -156,7 +161,7 @@ ion-loading.transparent {
   /** light **/
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 245, 248;
-  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast: #577ECA;
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;

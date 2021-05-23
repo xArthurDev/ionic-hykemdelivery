@@ -16,10 +16,11 @@ import { TabsPage } from './components/tabs/tabs.page';
 import { TabsPageModule } from './components/tabs/tabs.module';
 import { TypeDetailsPage } from './pages/modal/type-details/type-details.page';
 import { ScheduleDetailsPage } from './pages/modal/schedule-details/schedule-details.page';
+import { OtherOptionsPage } from './pages/modal/other-options/other-options.page';
 
 @NgModule({
-  declarations: [AppComponent, TypeDetailsPage, ScheduleDetailsPage],
-  entryComponents: [TypeDetailsPage, ScheduleDetailsPage],
+  declarations: [AppComponent, TypeDetailsPage, ScheduleDetailsPage, OtherOptionsPage],
+  entryComponents: [TypeDetailsPage, ScheduleDetailsPage, OtherOptionsPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, TabsPageModule],

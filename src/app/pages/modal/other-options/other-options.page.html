@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row class="question-row">
+      <ion-col>
+        <ion-label class="question-text">
+          Como deseja continuar?
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-row">
+      <ion-col size="6">
+        <ion-button fill="outline" color="tertiary" class="main-button" (click)="goToCellphonePage()">
+          Celular
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button fill="outline" color="secondary" class="main-button" (click)="goToEmailPage()">
+          E-mail
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

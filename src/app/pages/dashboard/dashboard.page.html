@@ -1,13 +1,55 @@
 <ion-content>
- 
-  <img src="./assets/design/Login e Cadastro.png" class="dash">
-
-  <ion-text class="text">Como deseja continuar?</ion-text>
-  <img class="button1" src="./assets/design/button1.png">
-
-  <img class="button2" src="./assets/design/button2.png" (click)="goToEmailPage()">
-
-  <img class="button3" src="./assets/design/button3.png" (click)="goToCellphonePage()">
-
+  <div class="dash-image">
+    <ion-grid class="dash-grid ion-text-center">
+      <ion-row>
+        <ion-col>
+          <ion-label class="question-text">
+            Como deseja continuar?
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="tertiary" class="main-button">
+            <img src="../../../assets/design/google.png" class="google-logo">
+            <div class="google-label">Continuar com o Google</div>
+          </ion-button>  
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="outline" color="secondary" class="main-button" (click)="openModal()">
+            Outras Opções
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
+
+
+<!-- <ion-grid class="ion-text-center">
+  <ion-row class="text-row">
+    <ion-col>
+      <ion-text class="question-text">
+        Como deseja continuar?
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <img class="button1" src="./assets/design/button1.png">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <img class="button2" src="./assets/design/button2.png" (click)="goToEmailPage()">    
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <img class="button3" src="./assets/design/button3.png" (click)="goToCellphonePage()">      
+    </ion-col>
+  </ion-row>
+</ion-grid> -->
 
