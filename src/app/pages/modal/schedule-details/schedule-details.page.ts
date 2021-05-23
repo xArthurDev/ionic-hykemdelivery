@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class ScheduleDetailsPage implements OnInit {
 
-  segment = "today";
+  segment = "today"
 
   constructor(
     private navCtrl: NavController
@@ -18,9 +18,12 @@ export class ScheduleDetailsPage implements OnInit {
   }
 
   segmentChanged(event){
-    console.log(this.segment);
-    
-    console.log(event);
+    if (event.detail.value === 'today') {
+      this.segment = 'today'
+    }
+    if (event.detail.value === 'tomorrow') {
+      this.segment = 'tomorrow'
+    }
   }
 
   goBackToAssistanceDetails() {
