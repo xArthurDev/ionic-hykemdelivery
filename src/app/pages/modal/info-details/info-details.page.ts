@@ -24,36 +24,36 @@ export class InfoDetailsPage implements OnInit {
         role: 'destructive',
         icon: 'today-outline',
         handler: () => {
-          console.log('Delete clicked');
+          console.log('Delete clicked')
         }
       }, {
         text: 'Terça - 10h00 às 17h00',
         icon: 'today-outline',
         handler: () => {
-          console.log('Share clicked');
+          console.log('Share clicked')
         }
       }, {
         text: 'Quarta - 10h00 às 17h00',
         icon: 'today-outline',
         handler: () => {
-          console.log('Play clicked');
+          console.log('Play clicked')
         }
       }, {
         text: 'Quinta - 10h00 às 17h00',
         icon: 'today-outline',
         handler: () => {
-          console.log('Favorite clicked');
+          console.log('Favorite clicked')
         }
       }, {
         text: 'Sexta - 10h00 às 17h00',
         icon: 'today-outline',
         role: 'today-outline',
         handler: () => {
-          console.log('Cancel clicked');
+          console.log('Cancel clicked')
         }
       }]
-    });
-    await actionSheet.present();
+    })
+    await actionSheet.present()
   }
 
   goBackToAssistanceDetails() {
